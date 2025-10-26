@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var wood_ui = get_tree().get_first_node_in_group("wood_ui")
 @onready var tree_health = 100
 var can_hit = false
 
@@ -20,4 +21,5 @@ func _process(_delta: float) -> void:
 		tree_health -= 10
 	
 	if tree_health <= 0:
+		wood_ui.tree_wood_count()
 		queue_free()
