@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddckudl6jhlc2"]
 
-[ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scenes/wood_count.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_count.gd" id="1_nt7q6"]
 
 [node name="UI" type="CanvasLayer"]
 
 [node name="wood count" type="Label" parent="." groups=["wood_ui"]]
 anchors_preset = -1
-anchor_right = 0.048
+anchor_right = 0.055000003
 anchor_bottom = 0.035
-offset_right = -0.29600143
+offset_right = -8.360004
 offset_bottom = 0.3199997
 text = "Wood: 0"
 script = ExtResource("1_nt7q6")
