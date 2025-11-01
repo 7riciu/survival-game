@@ -12,6 +12,8 @@ format = 2
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(552, 323)
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+
 [node name="tree" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(737, 189)
 

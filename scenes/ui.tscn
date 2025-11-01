@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=4 format=3 uid="uid://ddckudl6jhlc2"]
 
-[ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_count.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_ui.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://gwybqpokg854" path="res://scripts/health_ui.gd" id="2_x4jx1"]
+[ext_resource type="Script" uid="uid://d3degbt5mne77" path="res://scripts/hunger_ui.gd" id="3_yev5y"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -12,3 +14,17 @@ offset_right = -8.360004
 offset_bottom = 0.3199997
 text = "Wood: 0"
 script = ExtResource("1_nt7q6")
+
+[node name="health" type="Label" parent="." groups=["health_ui"]]
+offset_top = 48.0
+offset_right = 94.0
+offset_bottom = 71.0
+text = "Health: 100"
+script = ExtResource("2_x4jx1")
+
+[node name="hunger" type="Label" parent="." groups=["hunger_ui"]]
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 47.0
+text = "Hunger: 100"
+script = ExtResource("3_yev5y")
