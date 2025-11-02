@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
-@onready var player = get_tree().get_first_node_in_group("player")
+@onready var hunger_ui = get_tree().get_first_node_in_group("hunger_ui")
+@onready var berry_ui = get_tree().get_first_node_in_group("berry_ui")
 @onready var bush_area = $Area2D
 
 var berry_on_bush = 20
 var has_berry = true
 
 func _process(_delta: float) -> void:
-	if berry_on_bush < 1:
-		has_berry = false
-
-func berry_collect():
-	if has_berry:
-		berry_on_bush -= 2
-		player.berry_eat()
+	if bush_area.can_collect_berry and berry_on_bush > 0 and Input.is_action_just_pressed("e"):
+		berry_on_bush -= 10
+		berry_ui.berry_collect()
+		hunger_ui.hunger_increase_by_berry()
+	elif berry_on_bush <= 0:
+		queue_free()

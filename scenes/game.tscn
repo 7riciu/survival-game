@@ -29,3 +29,6 @@ position = Vector2(835, 459)
 position = Vector2(552, 323)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="bush2" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(428, 73)

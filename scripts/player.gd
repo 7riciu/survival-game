@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 @onready var tree = get_tree().get_nodes_in_group("tree")
-@onready var bush_area = get_tree().get_nodes_in_group("bush_area")
-@onready var bush = get_tree().get_nodes_in_group("bush")
 @onready var health_ui = get_tree().get_first_node_in_group("health_ui")
 @onready var hunger_ui = get_tree().get_first_node_in_group("hunger_ui")
 @onready var thirst_ui = get_tree().get_first_node_in_group("thirst_ui")
@@ -48,8 +46,3 @@ func health_decrease_by_needs():
 	while hunger_ui.hunger <= 0 and health_ui.health >= 20 or thirst_ui.thirst <= 0 and health_ui.health >= 20:
 		await get_tree().create_timer(1).timeout
 		health_ui.health_decrese_by_hunger()
-
-func berry_collect():
-	if Input.is_action_just_pressed("e") and bush_area.can_collect_berry and bush.has_berry:
-		berry_ui.berry_collect()
-		bush.berry_collect()
