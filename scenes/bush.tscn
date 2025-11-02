@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckwvuyrgnghru"]
+
+[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="1_lad4k"]
+[ext_resource type="Script" uid="uid://cgpbwajtkfffx" path="res://scripts/bush.gd" id="1_tu87o"]
+[ext_resource type="Script" uid="uid://pbjd0lpeq606" path="res://scripts/bush_area.gd" id="2_ehqem"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehqem"]
+atlas = ExtResource("1_lad4k")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tu87o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehqem")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ftm5"]
+size = Vector2(224, 69.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpk7d"]
+size = Vector2(369, 224)
+
+[node name="bush" type="CharacterBody2D" groups=["bush"]]
+script = ExtResource("1_tu87o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.2737368e-13, -2.3841858e-07)
+scale = Vector2(1.7578125, 1.03125)
+sprite_frames = SubResource("SpriteFrames_tu87o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_6ftm5")
+
+[node name="Area2D" type="Area2D" parent="." groups=["bush_area"]]
+script = ExtResource("2_ehqem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_jpk7d")

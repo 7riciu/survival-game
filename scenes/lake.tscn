@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://depikt0b02qx"]
+
+[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="1_31850"]
+[ext_resource type="Script" uid="uid://b8cpukkv4611e" path="res://scripts/lake.gd" id="1_fkw7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14mne"]
+size = Vector2(240, 111)
+
+[node name="lake" type="Area2D" groups=["lake_area"]]
+script = ExtResource("1_fkw7t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(104, 39.5)
+scale = Vector2(1.875, 0.8671875)
+texture = ExtResource("1_31850")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(104, 39.5)
+shape = SubResource("RectangleShape2D_14mne")
