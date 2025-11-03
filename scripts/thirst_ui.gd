@@ -1,11 +1,7 @@
 extends Label
 
-var thirst = 100
+@onready var player = get_tree().get_first_node_in_group("player")
+@onready var lake = get_tree().get_first_node_in_group("lake_area")
  
 func thirst_decrease_by_time():
-	thirst -= 2
-	self.text = "Thirst: " + str(thirst)
-	
-func thirst_increase_by_lake():
-	thirst += 10
-	self.text = "Thirst: " + str(thirst)
+	self.text = "Thirst: " + str(player.thirst)
