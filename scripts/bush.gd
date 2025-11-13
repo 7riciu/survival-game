@@ -11,6 +11,5 @@ func _process(_delta: float) -> void:
 	if bush_area.can_collect_berry and berry_on_bush > 0 and Input.is_action_just_pressed("e"):
 		berry_on_bush -= 10
 		berry_ui.berry_collect()
-		hunger_ui.hunger_increase_by_berry()
 	elif berry_on_bush <= 0:
 		queue_free()
