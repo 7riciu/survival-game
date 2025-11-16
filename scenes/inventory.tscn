@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg8nq1md32ss0"]
+[gd_scene load_steps=3 format=3 uid="uid://cg8nq1md32ss0"]
 
 [ext_resource type="Script" uid="uid://n1qfr28ylfdn" path="res://scripts/inventory.gd" id="1_qw0r6"]
-[ext_resource type="PackedScene" uid="uid://bj2p1os01wp66" path="res://scenes/inventory_slot.tscn" id="2_ty45s"]
 [ext_resource type="PackedScene" uid="uid://c6d1mysp15y1y" path="res://scenes/tooltip.tscn" id="3_53g1v"]
 
 [node name="Control" type="Control"]
@@ -16,8 +15,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CenterContainer" parent="GridContainer" instance=ExtResource("2_ty45s")]
-layout_mode = 2
-
-[node name="Tooltip" parent="GridContainer" instance=ExtResource("3_53g1v")]
-layout_mode = 2
+[node name="Tooltip" parent="." instance=ExtResource("3_53g1v")]
+layout_mode = 0
+offset_right = 0.0
+offset_bottom = 0.0

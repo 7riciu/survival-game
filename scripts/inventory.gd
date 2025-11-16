@@ -7,11 +7,10 @@ var rows: int = 3
 var cols: int = 6
 
 @onready var inventory_grid: GridContainer = $GridContainer
+@onready var tooltip: Tooltip = $Tooltip
 
 var inventory_slot_scene: PackedScene = preload("res://scenes/inventory_slot.tscn")
 var slots: Array[InventorySlot] = []
-
-var tooltip: Tooltip
 
 static var selected_item: InventoryItem = null
 

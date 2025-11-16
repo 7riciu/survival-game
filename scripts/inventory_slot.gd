@@ -24,7 +24,7 @@ func is_respecting_hint(new_item: InventoryItem, in_amount_as_well: bool = true)
 			and new_item.amount >= self.hint_item.amount
 		)
 	else:
-		return new_item.item_name == self.hint_item.item_nme
+		return new_item.item_name == self.hint_item.item_name
 
 func set_item_hint(new_item_hint: InventoryItem):
 	if self.hint_item:
@@ -47,7 +47,7 @@ func remove_item():
 
 func _on_texture_button_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
-		if event.button_text == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			slot_input.emit(
 				self, InventorySlotAction.SELECT
 			)
