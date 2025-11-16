@@ -488,8 +488,8 @@ position = Vector2(552, 323)
 [node name="bush2" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(428, 73)
 
-[node name="Inventory" parent="." instance=ExtResource("12_dinhu")]
-offset_left = 201.0
-offset_top = 408.0
-offset_right = 241.0
-offset_bottom = 448.0
+[node name="Control" parent="." instance=ExtResource("12_dinhu")]
+offset_left = 272.0
+offset_top = 462.0
+offset_right = 312.0
+offset_bottom = 502.0
