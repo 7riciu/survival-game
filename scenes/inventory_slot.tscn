@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj2p1os01wp66"]
+
+[ext_resource type="Script" uid="uid://detg52hktk3ag" path="res://scripts/inventory_slot.gd" id="1_f5bh6"]
+[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="2_bfyh4"]
+
+[node name="CenterContainer" type="CenterContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f5bh6")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+texture_normal = ExtResource("2_bfyh4")
