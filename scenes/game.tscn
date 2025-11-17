@@ -497,3 +497,6 @@ offset_bottom = 502.0
 
 [node name="small_rock" parent="." instance=ExtResource("13_kvuet")]
 position = Vector2(221, 451)
+
+[node name="small_rock2" parent="." instance=ExtResource("13_kvuet")]
+position = Vector2(263, 407)

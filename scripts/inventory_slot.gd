@@ -55,13 +55,13 @@ func _on_texture_button_gui_input(event):
 			slot_input.emit(
 				self, InventorySlotAction.SPLIT
 			)
-			
+
 func _on_texture_button_mouse_entered():
 	slot_hovered.emit(self, true)
 
 func _on_texture_button_mouse_exited():
 	slot_hovered.emit(self, false)
-	
+
 func select_item() -> InventoryItem:
 	var inventory = self.get_parent().get_parent()
 	var tmp_item := self.item
@@ -70,7 +70,7 @@ func select_item() -> InventoryItem:
 		self.item = null
 		tmp_item.z_index = 128
 	return tmp_item
-	
+
 func deselect_item(new_item: InventoryItem) -> InventoryItem:
 	if not is_respecting_hint(new_item):
 		return new_item
@@ -97,10 +97,10 @@ func deselect_item(new_item: InventoryItem) -> InventoryItem:
 
 func is_empty():
 	return self.item == null
-	
+
 func has_same_item(_item: InventoryItem):
 	return _item.item_name == self.item.item_name
-	
+
 func update_slot():
 	if item:
 		if not self.get_children().has(item):

@@ -8,6 +8,7 @@ size = Vector2(34, 32)
 
 [node name="small_rock" type="Area2D"]
 script = ExtResource("1_fff6k")
+item_name = "yay"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.4305115e-06, -4.7683716e-07)

@@ -47,3 +47,18 @@ func _on_slot_hovered(which: InventorySlot, is_hovering: bool):
 	elif which.hint_item:
 		tooltip.set_text(which.hint_item.item_name)
 		tooltip.visible = is_hovering
+
+func add_item_from_world(world_item: Item):
+	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
+	var inv_item: InventoryItem = inv_item_scene.instantiate()
+	inv_item.set_data(
+		world_item.item_name,
+		world_item.icon,
+		world_item.is_stackable,
+		1
+	)
+	for slot in slots:
+		if slot.is_empty():
+			slot.item = inv_item
+			slot.add_child(inv_item)
+			return
