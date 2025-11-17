@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://n1qfr28ylfdn" path="res://scripts/inventory.gd" id="1_qw0r6"]
 [ext_resource type="PackedScene" uid="uid://c6d1mysp15y1y" path="res://scenes/tooltip.tscn" id="3_53g1v"]
 
-[node name="Control" type="Control"]
+[node name="Inventory" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

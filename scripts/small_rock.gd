@@ -7,3 +7,8 @@ var is_stackable: bool = true
 
 func _ready() -> void:
 	add_to_group("items")
+	self.body_entered.connect(on_body_entered)
+
+func on_body_entered(body):
+	if body.is_in_group("player"):
+		queue_free()

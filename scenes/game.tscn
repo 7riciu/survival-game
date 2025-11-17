@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=21 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="Texture2D" uid="uid://dj10xblxx3r3w" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ckwvuyrgnghru" path="res://scenes/bush.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://cc4mx1mjc14em" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_Wide_v2.png" id="6_ca42v"]
 [ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cg2ibf6tctsqv" path="res://scenes/small_rock.tscn" id="13_kvuet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rysoc"]
 texture = ExtResource("1_kvpfn")
@@ -493,3 +494,6 @@ offset_left = 272.0
 offset_top = 462.0
 offset_right = 312.0
 offset_bottom = 502.0
+
+[node name="small_rock" parent="." instance=ExtResource("13_kvuet")]
+position = Vector2(221, 451)
