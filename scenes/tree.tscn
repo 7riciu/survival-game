@@ -1,39 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6pkfx3ea4e0d"]
+[gd_scene load_steps=8 format=3 uid="uid://c6pkfx3ea4e0d"]
 
 [ext_resource type="Script" uid="uid://b14q6xat7qq7e" path="res://scripts/tree.gd" id="1_viusy"]
 [ext_resource type="Script" uid="uid://bc2adrf0n3fs0" path="res://scripts/tree_area.gd" id="1_vplca"]
-[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="2_viusy"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vplca"]
-atlas = ExtResource("2_viusy")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_viusy"]
-atlas = ExtResource("2_viusy")
-region = Rect2(32, 64, 32, 32)
+[ext_resource type="Texture2D" uid="uid://bws0ebigjymbv" path="res://images/Sprout Lands - Sprites - Basic pack/Objects/tree.png" id="2_viusy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
 atlas = ExtResource("2_viusy")
-region = Rect2(64, 64, 32, 32)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ake3r"]
-atlas = ExtResource("2_viusy")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_18mvg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ake3r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vplca")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_viusy")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_qd6xs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ake3r")
 }],
 "loop": true,
 "name": &"default",
@@ -50,7 +29,7 @@ size = Vector2(148, 118)
 script = ExtResource("1_viusy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_18mvg")
+sprite_frames = SubResource("SpriteFrames_ake3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dmmp0")

@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cwxe8t4ukc8vk" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_Wide.png" id="5_ir15t"]
 [ext_resource type="PackedScene" uid="uid://ckwvuyrgnghru" path="res://scenes/bush.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://cc4mx1mjc14em" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Tilled_Dirt_Wide_v2.png" id="6_ca42v"]
-[ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cg2ibf6tctsqv" path="res://scenes/small_rock.tscn" id="13_kvuet"]
+[ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="13_trtic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rysoc"]
 texture = ExtResource("1_kvpfn")
@@ -489,14 +489,17 @@ position = Vector2(552, 323)
 [node name="bush2" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(428, 73)
 
-[node name="Control" parent="." instance=ExtResource("12_dinhu")]
-offset_left = 272.0
-offset_top = 462.0
-offset_right = 312.0
-offset_bottom = 502.0
-
 [node name="small_rock" parent="." instance=ExtResource("13_kvuet")]
 position = Vector2(221, 451)
 
 [node name="small_rock2" parent="." instance=ExtResource("13_kvuet")]
 position = Vector2(263, 407)
+
+[node name="small_rock3" parent="." instance=ExtResource("13_kvuet")]
+position = Vector2(161, 482)
+
+[node name="Inventory" parent="." instance=ExtResource("13_trtic")]
+offset_left = 226.0
+offset_top = 613.0
+offset_right = 266.0
+offset_bottom = 653.0

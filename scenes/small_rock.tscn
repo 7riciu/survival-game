@@ -1,7 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg2ibf6tctsqv"]
+[gd_scene load_steps=6 format=3 uid="uid://cg2ibf6tctsqv"]
 
 [ext_resource type="Script" uid="uid://dtevubrq23ebi" path="res://scripts/small_rock.gd" id="1_fff6k"]
-[ext_resource type="Texture2D" uid="uid://bkqv5mmp0ataj" path="res://images/icon.jpg" id="2_ryhel"]
+[ext_resource type="Texture2D" uid="uid://d57imjcps2ru" path="res://images/Sprout Lands - Sprites - Basic pack/Objects/rock.png" id="2_ryhel"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pysc"]
+atlas = ExtResource("2_ryhel")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5x16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pysc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pysc"]
 size = Vector2(34, 32)
@@ -10,10 +25,8 @@ size = Vector2(34, 32)
 script = ExtResource("1_fff6k")
 item_name = "yay"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.4305115e-06, -4.7683716e-07)
-scale = Vector2(0.064453125, 0.06054688)
-texture = ExtResource("2_ryhel")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e5x16")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2pysc")

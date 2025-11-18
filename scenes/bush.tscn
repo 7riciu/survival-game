@@ -1,18 +1,18 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckwvuyrgnghru"]
 
-[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="1_lad4k"]
 [ext_resource type="Script" uid="uid://cgpbwajtkfffx" path="res://scripts/bush.gd" id="1_tu87o"]
 [ext_resource type="Script" uid="uid://pbjd0lpeq606" path="res://scripts/bush_area.gd" id="2_ehqem"]
+[ext_resource type="Texture2D" uid="uid://g70tobstfgts" path="res://images/Sprout Lands - Sprites - Basic pack/Objects/bush with berries.png" id="2_tu87o"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehqem"]
-atlas = ExtResource("1_lad4k")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ftm5"]
+atlas = ExtResource("2_tu87o")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tu87o"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jpk7d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ehqem")
+"texture": SubResource("AtlasTexture_6ftm5")
 }],
 "loop": true,
 "name": &"default",
@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ftm5"]
-size = Vector2(224, 69.5)
+size = Vector2(16, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpk7d"]
 size = Vector2(369, 224)
@@ -29,12 +29,10 @@ size = Vector2(369, 224)
 script = ExtResource("1_tu87o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.2737368e-13, -2.3841858e-07)
-scale = Vector2(1.7578125, 1.03125)
-sprite_frames = SubResource("SpriteFrames_tu87o")
+sprite_frames = SubResource("SpriteFrames_jpk7d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 31)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_6ftm5")
 
 [node name="Area2D" type="Area2D" parent="." groups=["bush_area"]]
