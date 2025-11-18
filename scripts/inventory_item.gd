@@ -16,7 +16,10 @@ func set_data(_name: String, _icon: Texture2D, _is_stackable: bool, _amount: int
 	amount = _amount
 	
 func _process(_delta: float) -> void:
-	sprite.texture = icon
+	if icon:
+		sprite.texture = icon
+	else:
+		sprite.texture = null
 	if is_stackable:
 		label.text = str(amount)
 	else:

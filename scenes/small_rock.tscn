@@ -24,6 +24,7 @@ size = Vector2(34, 32)
 [node name="small_rock" type="Area2D"]
 script = ExtResource("1_fff6k")
 item_name = "yay"
+icon = ExtResource("2_ryhel")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e5x16")
