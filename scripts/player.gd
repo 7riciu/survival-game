@@ -32,9 +32,20 @@ func hunger_decrese():
 		hunger_ui.hunger_decrease_by_time()
 
 func thirst_decrease_by_time():
-	while thirst <= 100 and thirst > 0:
+	while  thirst > 0:
 		await get_tree().create_timer(2).timeout
 		thirst -= 2
+		
+		if not lake.can_drink:
+			thirst_ui.thirst_decrease_by_time()
+		elif lake.can_drink and thirst < 100:
+			thirst_increase_by_lake()
+
+func thirst_increase_by_lake():
+	if thirst > 100:
+		thirst = 100
+	if thirst < 100:
+		thirst += 2
 		thirst_ui.thirst_decrease_by_time()
 
 func pick_up_item(item: Item):

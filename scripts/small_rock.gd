@@ -5,6 +5,8 @@ class_name Item
 @export var icon: Texture2D
 @export var is_stackable: bool = true
 
+var amount = 0
+
 func _ready() -> void:
 	add_to_group("items")
 	self.body_entered.connect(on_body_entered)
