@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var berry_ui = get_tree().get_first_node_in_group("berry_ui")
 @onready var lake = get_tree().get_first_node_in_group("lake_area")
 
+@onready var anim = $AnimatedSprite2D
+
 var speed = 300.0
 var hunger = 100
 var thirst = 100
@@ -22,8 +24,32 @@ func _physics_process(_delta: float) -> void:
 		Input.get_axis("up", "down")
 	)
 
+	if direction != Vector2.ZERO:
+		direction = direction.normalized()
+
 	velocity = direction * speed
 	move_and_slide()
+	update_animation(direction)
+
+func update_animation(direction):
+	if direction == Vector2.ZERO:
+		match anim.animation:
+			"walk_right": anim.animation = "idle_right"
+			"walk_left": anim.animation = "idle_left"
+			"walk_up": anim.animation = "idle_up"
+			"walk_down": anim.animation = "idle_down"
+		return
+	
+	if abs(direction.x) > abs(direction.y):
+		if direction.x > 0:
+			anim.animation = "walk_right"
+		else:
+			anim.animation = "walk_left"
+	else:
+		if direction.y > 0:
+			anim.animation = "walk_down"
+		else:
+			anim.animation = "walk_up"
 
 func hunger_decrese():
 	while hunger <= 100 and hunger > 0:
