@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@export var item_name: String = ""
+@export var icon: Texture2D
+@export var is_stackable: bool = true
+
 @onready var hunger_ui = get_tree().get_first_node_in_group("hunger_ui")
 @onready var berry_ui = get_tree().get_first_node_in_group("berry_ui")
 @onready var player = get_tree().get_first_node_in_group("player")
@@ -13,4 +17,4 @@ func _process(_delta: float) -> void:
 		berry_on_bush -= 10
 		berry_ui.berry_collect()
 	elif berry_on_bush <= 0:
-		queue_free()
+		has_berry = false

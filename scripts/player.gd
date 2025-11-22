@@ -74,6 +74,6 @@ func thirst_increase_by_lake():
 		thirst += 2
 		thirst_ui.thirst_decrease_by_time()
 
-func pick_up_item(item: Item):
+func pick_up_item(item):
 	var inv = get_tree().get_first_node_in_group("inventory")
 	inv.add_item_from_world(item)
