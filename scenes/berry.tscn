@@ -21,7 +21,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ivy86"]
 radius = 38.078865
 
-[node name="berry" type="Area2D"]
+[node name="berry" type="Area2D" groups=["berry"]]
 script = ExtResource("1_1kxkh")
 item_name = "Berry"
 icon = ExtResource("1_q3b2i")
