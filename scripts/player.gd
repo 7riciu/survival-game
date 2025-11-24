@@ -13,6 +13,8 @@ var speed = 300.0
 var hunger = 100
 var thirst = 100
 
+var axe_power = 10
+
 func _ready() -> void:
 	print(get_tree().get_nodes_in_group("inventory"))
 	thirst_decrease_by_time()

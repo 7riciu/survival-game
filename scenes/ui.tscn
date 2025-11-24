@@ -54,13 +54,13 @@ offset_bottom = 122.0
 text = "Berries: 0"
 script = ExtResource("5_wm3ai")
 
-[node name="tool" type="Button" parent="."]
+[node name="axe" type="Button" parent="."]
 offset_left = 674.0
 offset_top = 7.0
 offset_right = 713.0
 offset_bottom = 42.0
-text = "tool"
+text = "axe"
 expand_icon = true
 script = ExtResource("7_p7vwb")
 
-[connection signal="pressed" from="tool" to="tool" method="_on_pressed"]
+[connection signal="pressed" from="axe" to="axe" method="_on_pressed"]
