@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var stone_ui = get_tree().get_first_node_in_group("stone_ui")
+
 @export var item_name: String = ""
 @export var icon: Texture2D
 @export var is_stackable: bool = true
@@ -13,4 +15,5 @@ func _ready() -> void:
 func on_body_entered(body):
 	if body.is_in_group("player"):
 		body.pick_up_item(self)
+		stone_ui.stone_count()
 		queue_free()

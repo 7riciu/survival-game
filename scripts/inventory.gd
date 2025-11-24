@@ -25,7 +25,7 @@ func _ready() -> void:
 		slot.slot_input.connect(self._on_slot_input)
 		slot.slot_hovered.connect(self._on_slot_hovered)
 	tooltip.visible = false
-	
+
 func _process(_delta: float) -> void:
 	tooltip.global_position = get_global_mouse_position() + Vector2.ONE * 8
 	if selected_item:

@@ -1,12 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=8 format=3 uid="uid://ddckudl6jhlc2"]
 
+[ext_resource type="Script" uid="uid://cay5uxx4kfohf" path="res://scripts/stone_ui.gd" id="1_8dubc"]
 [ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_ui.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://gwybqpokg854" path="res://scripts/health_ui.gd" id="2_x4jx1"]
 [ext_resource type="Script" uid="uid://d3degbt5mne77" path="res://scripts/hunger_ui.gd" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://bu4p6m0k68h5m" path="res://scripts/thirst_ui.gd" id="4_gdt2y"]
 [ext_resource type="Script" uid="uid://x4oy4ro6bvqx" path="res://scripts/berries_ui.gd" id="5_wm3ai"]
+[ext_resource type="Script" uid="uid://bxm30oci8mlcx" path="res://scripts/tool.gd" id="7_p7vwb"]
 
 [node name="UI" type="CanvasLayer"]
+
+[node name="stone count" type="Label" parent="." groups=["stone_ui"]]
+offset_top = 122.0
+offset_right = 96.0
+offset_bottom = 145.0
+text = "Stone: 0"
+script = ExtResource("1_8dubc")
 
 [node name="wood count" type="Label" parent="." groups=["wood_ui"]]
 anchors_preset = -1
@@ -44,3 +53,14 @@ offset_right = 94.0
 offset_bottom = 122.0
 text = "Berries: 0"
 script = ExtResource("5_wm3ai")
+
+[node name="tool" type="Button" parent="."]
+offset_left = 674.0
+offset_top = 7.0
+offset_right = 713.0
+offset_bottom = 42.0
+text = "tool"
+expand_icon = true
+script = ExtResource("7_p7vwb")
+
+[connection signal="pressed" from="tool" to="tool" method="_on_pressed"]
