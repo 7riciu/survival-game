@@ -69,14 +69,10 @@ func thirst_decrease_by_time():
 		if not lake.can_drink:
 			thirst_ui.thirst_decrease_by_time()
 		elif lake.can_drink and thirst < 100:
-			thirst_increase_by_lake()
-
-func thirst_increase_by_lake():
-	if thirst > 100:
-		thirst = 100
-	if thirst < 100:
-		thirst += 2
-		thirst_ui.thirst_decrease_by_time()
+			thirst += 4
+			if thirst >= 100:
+				thirst = 100
+			thirst_ui.thirst_decrease_by_time()
 
 func pick_up_item(item):
 	var inv = get_tree().get_first_node_in_group("inventory")
