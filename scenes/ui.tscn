@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=10 format=3 uid="uid://ddckudl6jhlc2"]
 
 [ext_resource type="Script" uid="uid://cay5uxx4kfohf" path="res://scripts/stone_ui.gd" id="1_8dubc"]
 [ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_ui.gd" id="1_nt7q6"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://d3degbt5mne77" path="res://scripts/hunger_ui.gd" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://bu4p6m0k68h5m" path="res://scripts/thirst_ui.gd" id="4_gdt2y"]
 [ext_resource type="Script" uid="uid://x4oy4ro6bvqx" path="res://scripts/berries_ui.gd" id="5_wm3ai"]
-[ext_resource type="Script" uid="uid://bxm30oci8mlcx" path="res://scripts/tool.gd" id="7_p7vwb"]
+[ext_resource type="Script" uid="uid://bxm30oci8mlcx" path="res://scripts/axe.gd" id="7_p7vwb"]
+[ext_resource type="Script" uid="uid://cxf6rismvej6m" path="res://scripts/pickaxe.gd" id="8_ktti3"]
+[ext_resource type="Script" uid="uid://csjqh0nu6koci" path="res://scripts/sword.gd" id="9_cgfq5"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -63,4 +65,22 @@ text = "axe"
 expand_icon = true
 script = ExtResource("7_p7vwb")
 
+[node name="pickaxe" type="Button" parent="."]
+offset_left = 646.0
+offset_top = 49.0
+offset_right = 713.0
+offset_bottom = 80.0
+text = "pickaxe"
+script = ExtResource("8_ktti3")
+
+[node name="sword" type="Button" parent="."]
+offset_left = 657.0
+offset_top = 86.0
+offset_right = 713.0
+offset_bottom = 117.0
+text = "sword"
+script = ExtResource("9_cgfq5")
+
 [connection signal="pressed" from="axe" to="axe" method="_on_pressed"]
+[connection signal="pressed" from="pickaxe" to="pickaxe" method="_on_pressed"]
+[connection signal="pressed" from="sword" to="sword" method="_on_pressed"]
