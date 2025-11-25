@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=23 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="Texture2D" uid="uid://dj10xblxx3r3w" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cg2ibf6tctsqv" path="res://scenes/small_rock.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="13_trtic"]
 [ext_resource type="PackedScene" uid="uid://rpaxtffl7ohy" path="res://scenes/berry.tscn" id="14_trtic"]
+[ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/woolf.tscn" id="15_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rysoc"]
 texture = ExtResource("1_kvpfn")
@@ -507,3 +508,6 @@ offset_bottom = 653.0
 
 [node name="berry" parent="." instance=ExtResource("14_trtic")]
 position = Vector2(461, 385)
+
+[node name="woolf" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(415, 238)

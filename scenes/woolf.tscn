@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://8shn8hwalmlg"]
+
+[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="1_605r5"]
+[ext_resource type="Script" uid="uid://cydihsb2aaw1b" path="res://scripts/woolf.gd" id="1_aknat"]
+[ext_resource type="Script" uid="uid://b1nev2ckha303" path="res://scripts/woolf_area.gd" id="3_2isy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aknat"]
+atlas = ExtResource("1_605r5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2isy7"]
+atlas = ExtResource("1_605r5")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30u01"]
+atlas = ExtResource("1_605r5")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvnyu"]
+atlas = ExtResource("1_605r5")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7x8og"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aknat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2isy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30u01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvnyu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xyg2"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2isy7"]
+size = Vector2(138, 132)
+
+[node name="woolf" type="CharacterBody2D"]
+script = ExtResource("1_aknat")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7x8og")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4xyg2")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_2isy7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2isy7")
