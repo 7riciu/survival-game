@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@onready var player = get_tree().get_first_node_in_group("player")
+@onready var woolf_area = $Area2D
+
+var health = 100
 var speed = 50
 var timer = 0
 var wander_change_time = 2
@@ -17,6 +21,10 @@ func _process(_delta: float) -> void:
 		chase_player()
 	else:
 		wander(_delta)
+	if woolf_area.can_attack and Input.is_action_just_pressed("click"):
+			health -= player.sword_power
+	if health <= 0:
+		queue_free()
 		
 func chase_player():
 	if target_player == null:

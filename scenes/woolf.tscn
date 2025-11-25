@@ -46,7 +46,7 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2isy7"]
 size = Vector2(138, 132)
 
-[node name="woolf" type="CharacterBody2D"]
+[node name="woolf" type="CharacterBody2D" groups=["woolf"]]
 script = ExtResource("1_aknat")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

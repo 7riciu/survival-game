@@ -19,5 +19,5 @@ func _on_pressed() -> void:
 		wood.text = "Wood: " + str(wood.wood)
 		stone.stone -= 10
 		stone.text = "Stone: " + str(stone.stone)
-		player.sword_power = 20
+		player.sword_power = 50
 		print("bought")
