@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://xgihdsitiw16"]
+
+[ext_resource type="Script" uid="uid://bpsnf5rsplhrg" path="res://scripts/meat.gd" id="1_5xyno"]
+[ext_resource type="Texture2D" uid="uid://b01urd2n1nbaw" path="res://assets/berry holder.png" id="1_omtcd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xyno"]
+atlas = ExtResource("1_omtcd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jh885"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xyno")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_df1yr"]
+radius = 25.079872
+
+[node name="meat" type="Area2D"]
+script = ExtResource("1_5xyno")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jh885")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_df1yr")

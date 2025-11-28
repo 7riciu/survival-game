@@ -33,27 +33,11 @@ func _physics_process(_delta: float) -> void:
 
 	velocity = direction * speed
 	move_and_slide()
-	update_animation(direction)
-
-func update_animation(direction):
-	if direction == Vector2.ZERO:
-		match anim.animation:
-			"walk_right": anim.animation = "idle_right"
-			"walk_left": anim.animation = "idle_left"
-			"walk_up": anim.animation = "idle_up"
-			"walk_down": anim.animation = "idle_down"
-		return
 	
-	if abs(direction.x) > abs(direction.y):
-		if direction.x > 0:
-			anim.animation = "walk_right"
-		else:
-			anim.animation = "walk_left"
-	else:
-		if direction.y > 0:
-			anim.animation = "walk_down"
-		else:
-			anim.animation = "walk_up"
+	var mouse_pos = get_global_mouse_position()
+	var dir = mouse_pos - global_position
+	
+	self.rotation = dir.angle() + deg_to_rad(-90)
 
 func hunger_decrese():
 	while hunger <= 100 and hunger > 0:

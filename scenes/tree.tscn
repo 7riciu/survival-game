@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://b14q6xat7qq7e" path="res://scripts/tree.gd" id="1_viusy"]
 [ext_resource type="Script" uid="uid://bc2adrf0n3fs0" path="res://scripts/tree_area.gd" id="1_vplca"]
-[ext_resource type="Texture2D" uid="uid://bws0ebigjymbv" path="res://images/Sprout Lands - Sprites - Basic pack/Objects/tree.png" id="2_viusy"]
+[ext_resource type="Texture2D" uid="uid://l45r7tdvgdv6" path="res://assets/tree.png" id="2_viusy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
 atlas = ExtResource("2_viusy")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 555, 737)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ake3r"]
 animations = [{
@@ -20,10 +20,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmmp0"]
-size = Vector2(32, 32)
+size = Vector2(114, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m26wl"]
-size = Vector2(148, 118)
+size = Vector2(368, 337)
 
 [node name="tree" type="CharacterBody2D" groups=["tree"]]
 script = ExtResource("1_viusy")
@@ -32,10 +32,12 @@ script = ExtResource("1_viusy")
 sprite_frames = SubResource("SpriteFrames_ake3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18, 310)
 shape = SubResource("RectangleShape2D_dmmp0")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_vplca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-18, 310)
 shape = SubResource("RectangleShape2D_m26wl")
