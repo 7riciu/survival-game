@@ -9,6 +9,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 
+var health = 100
 var speed = 300.0
 var hunger = 100
 var thirst = 100
@@ -58,6 +59,12 @@ func thirst_decrease_by_time():
 				thirst = 100
 			thirst_ui.thirst_decrease_by_time()
 
+func health_decrese_by_wolf():
+	if  health > 0:
+		health -= 10
+		health_ui.health_update()
+		print(health)
+	
 func pick_up_item(item):
 	var inv = get_tree().get_first_node_in_group("inventory")
 	inv.add_item_from_world(item)

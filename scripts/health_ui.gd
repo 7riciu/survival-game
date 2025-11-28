@@ -1,11 +1,6 @@
 extends Label
 
-var health = 100
+@onready var player = get_tree().get_first_node_in_group("player")
 
-func health_decrese_by_hunger():
-	health -= 2
-	self.text = "Health: " + str(health)
-
-func health_decrese_by_enemy():
-	health -= 10
-	self.text = "Health: " + str(health)
+func health_update():
+	self.text = "Health: " + str(player.health)

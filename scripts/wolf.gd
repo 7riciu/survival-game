@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @onready var player = get_tree().get_first_node_in_group("player")
-@onready var woolf_area = $Area2D
+@onready var health_ui = get_tree().get_first_node_in_group("health_ui")
+@onready var wolf_area = $Area2D
 @onready var fur_scene: PackedScene = preload("res://scenes/wolf_fur.tscn")
 @onready var meat_scene: PackedScene = preload("res://scenes/meat.tscn")
 
@@ -13,6 +14,7 @@ var wander_radius = 150
 var wander_direction:Vector2 = Vector2.ZERO
 var home_position: Vector2
 
+var is_attacking = false
 var target_player = null
 
 func _ready() -> void:
@@ -23,8 +25,8 @@ func _process(_delta: float) -> void:
 		chase_player()
 	else:
 		wander(_delta)
-	if woolf_area.can_attack and Input.is_action_just_pressed("click"):
-			health -= player.sword_power
+	if wolf_area.can_attack and Input.is_action_just_pressed("click"):
+		health -= player.sword_power
 	if health <= 0:
 		var fur = fur_scene.instantiate()
 		var meat = meat_scene.instantiate()
@@ -41,6 +43,16 @@ func chase_player():
 	velocity = direction * speed * 1.3
 	self.rotation = direction.angle() + deg_to_rad(-90)
 	move_and_slide()
+	attack()
+	
+func attack():
+	if is_attacking:
+		return
+	is_attacking = true
+	if wolf_area.can_attack:
+		await get_tree().create_timer(2).timeout
+		player.health_decrese_by_wolf()
+	is_attacking = false
 
 func wander(delta):
 	timer -= delta
