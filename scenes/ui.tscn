@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=16 format=3 uid="uid://ddckudl6jhlc2"]
 
 [ext_resource type="Script" uid="uid://cay5uxx4kfohf" path="res://scripts/stone_ui.gd" id="1_8dubc"]
 [ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_ui.gd" id="1_nt7q6"]
@@ -10,6 +10,11 @@
 [ext_resource type="Script" uid="uid://cxf6rismvej6m" path="res://scripts/pickaxe.gd" id="8_ktti3"]
 [ext_resource type="Script" uid="uid://csjqh0nu6koci" path="res://scripts/sword.gd" id="9_cgfq5"]
 [ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="10_7dvkv"]
+[ext_resource type="Texture2D" uid="uid://ld4b1xhx5eij" path="res://assets/timer.png" id="11_qsv74"]
+[ext_resource type="Texture2D" uid="uid://da86lfs60tona" path="res://assets/slot.png" id="12_f7tlh"]
+[ext_resource type="Texture2D" uid="uid://b4h5w5o24x4tc" path="res://assets/health.png" id="12_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://cp1aomer8ddsf" path="res://assets/hunger.png" id="13_cof4p"]
+[ext_resource type="Texture2D" uid="uid://b4vdyd5oc00uk" path="res://assets/thirst.png" id="14_f7tlh"]
 
 [node name="UI" type="CanvasLayer"]
 
@@ -65,27 +70,27 @@ text = "Berries: 0"
 script = ExtResource("5_wm3ai")
 
 [node name="axe" type="Button" parent="."]
-offset_left = 1868.0
-offset_top = 14.0
-offset_right = 1907.0
-offset_bottom = 49.0
+offset_left = 652.0
+offset_top = 16.0
+offset_right = 691.0
+offset_bottom = 51.0
 text = "axe"
 expand_icon = true
 script = ExtResource("7_p7vwb")
 
 [node name="pickaxe" type="Button" parent="."]
-offset_left = 1840.0
-offset_top = 56.0
-offset_right = 1907.0
-offset_bottom = 87.0
+offset_left = 710.0
+offset_top = 18.0
+offset_right = 777.0
+offset_bottom = 49.0
 text = "pickaxe"
 script = ExtResource("8_ktti3")
 
 [node name="sword" type="Button" parent="."]
-offset_left = 1851.0
-offset_top = 93.0
-offset_right = 1907.0
-offset_bottom = 124.0
+offset_left = 575.0
+offset_top = 22.0
+offset_right = 631.0
+offset_bottom = 53.0
 text = "sword"
 script = ExtResource("9_cgfq5")
 
@@ -99,6 +104,70 @@ offset_right = -157.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="timer_ui" type="TextureRect" parent="."]
+offset_left = 1621.0
+offset_top = 21.0
+offset_right = 1893.0
+offset_bottom = 289.0
+texture = ExtResource("11_qsv74")
+
+[node name="health_bar" type="TextureProgressBar" parent="." groups=["health_bar"]]
+offset_left = 1483.0
+offset_top = 101.0
+offset_right = 1571.0
+offset_bottom = 189.0
+step = 2.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("12_f7tlh")
+tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
+tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
+
+[node name="health_ui" type="TextureRect" parent="."]
+offset_left = 1455.0
+offset_top = 81.0
+offset_right = 1600.0
+offset_bottom = 217.0
+texture = ExtResource("12_h1mc3")
+
+[node name="hunger_bar" type="TextureProgressBar" parent="." groups=["hunger_bar"]]
+offset_left = 1538.0
+offset_top = 267.0
+offset_right = 1632.0
+offset_bottom = 357.0
+step = 2.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("12_f7tlh")
+tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
+tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
+
+[node name="hunger_ui" type="TextureRect" parent="."]
+offset_left = 1511.0
+offset_top = 247.0
+offset_right = 1656.0
+offset_bottom = 383.0
+texture = ExtResource("13_cof4p")
+
+[node name="thirst_bar" type="TextureProgressBar" parent="." groups=["thirst_bar"]]
+offset_left = 1714.0
+offset_top = 328.0
+offset_right = 1808.0
+offset_bottom = 418.0
+step = 2.0
+value = 100.0
+fill_mode = 3
+texture_progress = ExtResource("12_f7tlh")
+tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
+tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
+
+[node name="thirst_ui" type="TextureRect" parent="."]
+offset_left = 1687.0
+offset_top = 308.0
+offset_right = 1832.0
+offset_bottom = 444.0
+texture = ExtResource("14_f7tlh")
 
 [connection signal="pressed" from="axe" to="axe" method="_on_pressed"]
 [connection signal="pressed" from="pickaxe" to="pickaxe" method="_on_pressed"]
