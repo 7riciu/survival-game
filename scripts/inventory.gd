@@ -3,8 +3,8 @@ class_name  Inventory
 
 var inventory_item_scene = preload("res://scenes/inventory_slot.tscn")
 
-var rows: int = 3
-var cols: int = 6
+var rows: int = 1
+var cols: int = 10
 
 var inventory_content = {}
 

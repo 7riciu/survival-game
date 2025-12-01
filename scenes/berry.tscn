@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://rpaxtffl7ohy"]
 
 [ext_resource type="Script" uid="uid://bvdqeem3huywj" path="res://scripts/berry.gd" id="1_1kxkh"]
-[ext_resource type="Texture2D" uid="uid://b01urd2n1nbaw" path="res://assets/berry holder.png" id="1_q3b2i"]
+[ext_resource type="Texture2D" uid="uid://ceuc8b8jl0msh" path="res://assets/berry.png" id="2_1kxkh"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1kxkh"]
-atlas = ExtResource("1_q3b2i")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivy86"]
+atlas = ExtResource("2_1kxkh")
+region = Rect2(0, 0, 58, 65)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vcmpl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1kxkh")
+"texture": SubResource("AtlasTexture_ivy86")
 }],
 "loop": true,
 "name": &"default",
@@ -19,12 +19,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ivy86"]
-radius = 38.078865
+radius = 40.0
 
 [node name="berry" type="Area2D" groups=["berry"]]
 script = ExtResource("1_1kxkh")
 item_name = "Berry"
-icon = ExtResource("1_q3b2i")
+icon = ExtResource("2_1kxkh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vcmpl")

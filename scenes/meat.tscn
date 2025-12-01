@@ -1,10 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://xgihdsitiw16"]
 
 [ext_resource type="Script" uid="uid://bpsnf5rsplhrg" path="res://scripts/meat.gd" id="1_5xyno"]
-[ext_resource type="Texture2D" uid="uid://b01urd2n1nbaw" path="res://assets/berry holder.png" id="1_omtcd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vcmpl"]
+load_path = "res://.godot/imported/berry holder.png-6af4d4ce47b895d56c430dacbc460312.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5xyno"]
-atlas = ExtResource("1_omtcd")
+atlas = SubResource("CompressedTexture2D_vcmpl")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jh885"]

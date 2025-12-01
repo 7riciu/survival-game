@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df33pa3tt5ilf"
-path="res://.godot/imported/rock holder.png-cde6fc70bf16b7ed09037774376b9926.ctex"
+uid="uid://ceuc8b8jl0msh"
+path="res://.godot/imported/berry.png-006e0ca2ab2816e7ff0a0748bafdc326.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rock holder.png"
-dest_files=["res://.godot/imported/rock holder.png-cde6fc70bf16b7ed09037774376b9926.ctex"]
+source_file="res://assets/berry.png"
+dest_files=["res://.godot/imported/berry.png-006e0ca2ab2816e7ff0a0748bafdc326.ctex"]
 
 [params]
 

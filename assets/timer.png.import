@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yaspxpxwslyk"
-path="res://.godot/imported/log holder.png-b433f0d26332cb6d00d0d74646d87724.ctex"
+uid="uid://ld4b1xhx5eij"
+path="res://.godot/imported/timer.png-8c3db9dc264a28a0c2338f14b4510a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/log holder.png"
-dest_files=["res://.godot/imported/log holder.png-b433f0d26332cb6d00d0d74646d87724.ctex"]
+source_file="res://assets/timer.png"
+dest_files=["res://.godot/imported/timer.png-8c3db9dc264a28a0c2338f14b4510a48.ctex"]
 
 [params]
 

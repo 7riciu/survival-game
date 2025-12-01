@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b01urd2n1nbaw"
-path="res://.godot/imported/berry holder.png-6af4d4ce47b895d56c430dacbc460312.ctex"
+uid="uid://b4vdyd5oc00uk"
+path="res://.godot/imported/thirst.png-fa2bd9c42b3f78c4568a6d962bc9ae8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/berry holder.png"
-dest_files=["res://.godot/imported/berry holder.png-6af4d4ce47b895d56c430dacbc460312.ctex"]
+source_file="res://assets/thirst.png"
+dest_files=["res://.godot/imported/thirst.png-fa2bd9c42b3f78c4568a6d962bc9ae8b.ctex"]
 
 [params]
 

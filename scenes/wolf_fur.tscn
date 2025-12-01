@@ -1,17 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf3iyxgclpl0n"]
+[gd_scene load_steps=7 format=3 uid="uid://cf3iyxgclpl0n"]
 
 [ext_resource type="Script" uid="uid://beuxmtklqqk3e" path="res://scripts/wolf_fur.gd" id="1_sh185"]
-[ext_resource type="Texture2D" uid="uid://yaspxpxwslyk" path="res://assets/log holder.png" id="2_02s42"]
+[ext_resource type="Texture2D" uid="uid://hgiphjds65li" path="res://assets/wood.png" id="2_sh185"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ve033"]
-atlas = ExtResource("2_02s42")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_02s42"]
+load_path = "res://.godot/imported/log holder.png-b433f0d26332cb6d00d0d74646d87724.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6psrr"]
+atlas = ExtResource("2_sh185")
+region = Rect2(0, 0, 67, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_loees"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ve033")
+"texture": SubResource("AtlasTexture_6psrr")
 }],
 "loop": true,
 "name": &"default",
@@ -19,12 +22,12 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntyq6"]
-radius = 20.024984
+radius = 46.09772
 
 [node name="woolf_fur" type="Area2D"]
 script = ExtResource("1_sh185")
 item_name = "Fur"
-icon = ExtResource("2_02s42")
+icon = SubResource("CompressedTexture2D_02s42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_loees")
