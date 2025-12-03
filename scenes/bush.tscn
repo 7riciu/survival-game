@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cgpbwajtkfffx" path="res://scripts/bush.gd" id="1_tu87o"]
 [ext_resource type="Script" uid="uid://pbjd0lpeq606" path="res://scripts/bush_area.gd" id="2_ehqem"]
-[ext_resource type="Texture2D" uid="uid://g70tobstfgts" path="res://images/Sprout Lands - Sprites - Basic pack/Objects/bush with berries.png" id="2_tu87o"]
+[ext_resource type="Texture2D" uid="uid://betj2hqs76lnu" path="res://assets/bush berry.png" id="2_tu87o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ftm5"]
 atlas = ExtResource("2_tu87o")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 415, 255)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jpk7d"]
 animations = [{
@@ -15,7 +15,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_6ftm5")
 }],
 "loop": true,
-"name": &"default",
+"name": &"berry",
 "speed": 5.0
 }, {
 "frames": [],
@@ -25,19 +25,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ftm5"]
-size = Vector2(16, 15)
+size = Vector2(402, 120)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpk7d"]
-size = Vector2(148, 112)
+size = Vector2(556, 396)
 
 [node name="bush" type="CharacterBody2D" groups=["bush"]]
 script = ExtResource("1_tu87o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jpk7d")
+animation = &"berry"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(2, 52)
 shape = SubResource("RectangleShape2D_6ftm5")
 
 [node name="Area2D" type="Area2D" parent="." groups=["bush_area"]]
