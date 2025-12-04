@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cif56t0m63o21"]
+
+[ext_resource type="Texture2D" uid="uid://blj65lthve2bc" path="res://assets/rock.png" id="1_1di36"]
+[ext_resource type="Script" uid="uid://v7o4etp5nrio" path="res://scripts/rock.gd" id="1_ik6fu"]
+[ext_resource type="Script" uid="uid://bulsodfhpud8g" path="res://scripts/rock_area.gd" id="2_mek2u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mek2u"]
+atlas = ExtResource("1_1di36")
+region = Rect2(0, 0, 300, 126)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ik6fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mek2u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_872ht"]
+size = Vector2(301, 91)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2d0s"]
+radius = 210.94312
+
+[node name="rock" type="CharacterBody2D"]
+script = ExtResource("1_ik6fu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ik6fu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 15.5)
+shape = SubResource("RectangleShape2D_872ht")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_mek2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_p2d0s")

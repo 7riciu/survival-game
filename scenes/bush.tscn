@@ -1,11 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckwvuyrgnghru"]
+[gd_scene load_steps=10 format=3 uid="uid://ckwvuyrgnghru"]
 
 [ext_resource type="Script" uid="uid://cgpbwajtkfffx" path="res://scripts/bush.gd" id="1_tu87o"]
 [ext_resource type="Script" uid="uid://pbjd0lpeq606" path="res://scripts/bush_area.gd" id="2_ehqem"]
 [ext_resource type="Texture2D" uid="uid://betj2hqs76lnu" path="res://assets/bush berry.png" id="2_tu87o"]
+[ext_resource type="Texture2D" uid="uid://dgxtwgshk6lry" path="res://assets/bush.png" id="3_6ftm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ftm5"]
 atlas = ExtResource("2_tu87o")
+region = Rect2(0, 0, 415, 255)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpk7d"]
+atlas = ExtResource("3_6ftm5")
 region = Rect2(0, 0, 415, 255)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jpk7d"]
@@ -18,7 +23,10 @@ animations = [{
 "name": &"berry",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpk7d")
+}],
 "loop": true,
 "name": &"empty",
 "speed": 5.0
@@ -35,7 +43,8 @@ script = ExtResource("1_tu87o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jpk7d")
-animation = &"berry"
+animation = &"empty"
+autoplay = "berry"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 52)

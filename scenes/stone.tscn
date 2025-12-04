@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://ckhdw1omvpuys"]
+[gd_scene load_steps=6 format=3 uid="uid://cg2ibf6tctsqv"]
 
-[node name="stone" type="CharacterBody2D"]
+[ext_resource type="Script" uid="uid://dtevubrq23ebi" path="res://scripts/small_rock.gd" id="1_tuldt"]
+[ext_resource type="Texture2D" uid="uid://cybhhlsqlmug" path="res://assets/stone.png" id="2_f651v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5x16"]
+atlas = ExtResource("2_f651v")
+region = Rect2(0, 0, 64, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5x16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5x16")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pysc"]
+radius = 37.0
+
+[node name="stone" type="Area2D"]
+script = ExtResource("1_tuldt")
+item_name = "stone"
+icon = ExtResource("2_f651v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e5x16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2pysc")
