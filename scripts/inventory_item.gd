@@ -24,11 +24,6 @@ func _process(_delta: float) -> void:
 		label.text = str(amount)
 	else:
 		label.visible = false
-
-func set_sprite_size_to(sprite: Sprite2D, size: Vector2):
-	var texture_size = sprite.texture.get_size()
-	var scale_factor = Vector2(size.x / texture_size.x, size.y / texture_size.y)
-	sprite.scale = scale_factor
 	
 func fade():
 	sprite.modulate = Color(1, 1, 1, 0.4)

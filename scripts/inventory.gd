@@ -8,6 +8,7 @@ var cols: int = 10
 
 var inventory_content = {}
 
+@onready var inv_item_label = get_tree().get_first_node_in_group("inv_item_label")
 @onready var inventory_grid: GridContainer = $GridContainer
 @onready var tooltip: Tooltip = $Tooltip
 
@@ -22,8 +23,6 @@ func _ready() -> void:
 		var slot = inventory_slot_scene.instantiate()
 		slots.append(slot)
 		inventory_grid.add_child(slot)
-		slot.slot_input.connect(self._on_slot_input)
-		slot.slot_hovered.connect(self._on_slot_hovered)
 	tooltip.visible = false
 
 func _process(_delta: float) -> void:
@@ -31,16 +30,6 @@ func _process(_delta: float) -> void:
 	if selected_item:
 		tooltip.visible = false
 		selected_item.global_position = get_global_mouse_position()
-
-func _on_slot_input(which: InventorySlot, action: InventorySlot.InventorySlotAction):
-	print(action)
-	if not selected_item:
-		if action == InventorySlot.InventorySlotAction.SELECT:
-			selected_item = which.select_item()
-		elif action == InventorySlot.InventorySlotAction.SPLIT:
-			selected_item = which.split_item()
-	else:
-		selected_item = which.deselect_item(selected_item)
 			
 func _on_slot_hovered(which: InventorySlot, is_hovering: bool):
 	if which.item:
@@ -61,7 +50,9 @@ func add_item_from_world(world_item):
 		world_item.amount
 	)
 	for slot in slots:
-		if slot.is_empty():
+		if not world_item.is_in_inv == true :
 			slot.item = inv_item
 			slot.add_child(inv_item)
 			return
+		else:
+			pass
