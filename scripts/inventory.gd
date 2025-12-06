@@ -30,12 +30,11 @@ func _process(_delta: float) -> void:
 
 func add_item_from_world(world_item): 
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
-	world_item.amount += 1
+
 	if world_item.is_stackable:
 		for slot in slots:
 			if not slot.is_empty() and slot.item.item_name == world_item.item_name:
-				# Stack on existing item
-				slot.item.amount += 1
+				slot.item.amount = world_item.amount
 				slot.item.label.text = str(slot.item.amount)
 				return
 				

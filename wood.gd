@@ -15,5 +15,6 @@ func _ready() -> void:
 func on_body_entered(body):
 	if body.is_in_group("player"):
 		wood_ui.tree_wood_count()
+		amount = wood_ui.amount
 		body.pick_up_item(self)
 		queue_free()

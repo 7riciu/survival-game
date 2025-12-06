@@ -1,19 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://depikt0b02qx"]
+[gd_scene load_steps=6 format=3 uid="uid://depikt0b02qx"]
 
-[ext_resource type="Texture2D" uid="uid://cqnp1wptgmldb" path="res://icon.svg" id="1_31850"]
 [ext_resource type="Script" uid="uid://b8cpukkv4611e" path="res://scripts/lake.gd" id="1_fkw7t"]
+[ext_resource type="Texture2D" uid="uid://vru8l24wl25t" path="res://assets/lake.png" id="2_fkw7t"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_14mne"]
-size = Vector2(240, 111)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p5pm"]
+atlas = ExtResource("2_fkw7t")
+region = Rect2(0, 0, 637, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1x1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4p5pm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4c3i"]
+radius = 133.0
+height = 620.0
 
 [node name="lake" type="Area2D" groups=["lake_area"]]
 script = ExtResource("1_fkw7t")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(104, 39.5)
-scale = Vector2(1.875, 0.8671875)
-texture = ExtResource("1_31850")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m1x1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(104, 39.5)
-shape = SubResource("RectangleShape2D_14mne")
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_c4c3i")

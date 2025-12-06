@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://cf3iyxgclpl0n"]
 
 [ext_resource type="Script" uid="uid://beuxmtklqqk3e" path="res://scripts/wolf_fur.gd" id="1_sh185"]
-[ext_resource type="Texture2D" uid="uid://hgiphjds65li" path="res://assets/wood.png" id="2_sh185"]
+[ext_resource type="Texture2D" uid="uid://bb12ddvg05gww" path="res://assets/fur.png" id="2_sh185"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6psrr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_02s42"]
 atlas = ExtResource("2_sh185")
-region = Rect2(0, 0, 67, 64)
+region = Rect2(0, 0, 63, 65)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_loees"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6psrr")
+"texture": SubResource("AtlasTexture_02s42")
 }],
 "loop": true,
 "name": &"default",

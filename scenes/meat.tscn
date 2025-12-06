@@ -1,19 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://xgihdsitiw16"]
+[gd_scene load_steps=6 format=3 uid="uid://xgihdsitiw16"]
 
 [ext_resource type="Script" uid="uid://bpsnf5rsplhrg" path="res://scripts/meat.gd" id="1_5xyno"]
-[ext_resource type="Texture2D" uid="uid://ceuc8b8jl0msh" path="res://assets/berry.png" id="2_5xyno"]
+[ext_resource type="Texture2D" uid="uid://qacpd2hvtqvi" path="res://assets/meat.png" id="2_5xyno"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vcmpl"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5xyno"]
-atlas = SubResource("CompressedTexture2D_vcmpl")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh885"]
+atlas = ExtResource("2_5xyno")
+region = Rect2(0, 0, 63, 59)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jh885"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5xyno")
+"texture": SubResource("AtlasTexture_jh885")
 }],
 "loop": true,
 "name": &"default",
@@ -21,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_df1yr"]
-radius = 25.079872
+radius = 50.039986
 
 [node name="meat" type="Area2D"]
 script = ExtResource("1_5xyno")

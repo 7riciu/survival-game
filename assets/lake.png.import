@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bws0ebigjymbv"
-path="res://.godot/imported/tree.png-833dc57ac2f31f9d17742ec5b708af8a.ctex"
+uid="uid://vru8l24wl25t"
+path="res://.godot/imported/lake.png-400883f7610475b7fc99a0111e37a114.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Sprout Lands - Sprites - Basic pack/Objects/tree.png"
-dest_files=["res://.godot/imported/tree.png-833dc57ac2f31f9d17742ec5b708af8a.ctex"]
+source_file="res://assets/lake.png"
+dest_files=["res://.godot/imported/lake.png-400883f7610475b7fc99a0111e37a114.ctex"]
 
 [params]
 
