@@ -8,7 +8,7 @@ extends Area2D
 @export var is_stackable: bool = true
 
 var amount = 0
-var is_in_inv
+var is_in_inv = false
 
 func _ready() -> void:
 	add_to_group("items")

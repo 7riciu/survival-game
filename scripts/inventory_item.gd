@@ -10,7 +10,7 @@ var is_stackable: bool = true
 var amount: int = 0
 
 func set_data(_name: String, _icon: Texture2D, _is_stackable: bool, _amount: int):
-	name = _name
+	item_name = _name
 	icon = _icon
 	is_stackable = _is_stackable
 	amount = _amount

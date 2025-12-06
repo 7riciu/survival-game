@@ -26,33 +26,28 @@ func _ready() -> void:
 	tooltip.visible = false
 
 func _process(_delta: float) -> void:
-	tooltip.global_position = get_global_mouse_position() + Vector2.ONE * 8
-	if selected_item:
-		tooltip.visible = false
-		selected_item.global_position = get_global_mouse_position()
-			
-func _on_slot_hovered(which: InventorySlot, is_hovering: bool):
-	if which.item:
-		tooltip.set_text(which.item_name)
-		tooltip.visible = is_hovering
-	elif which.hint_item:
-		tooltip.set_text(which.hint_item.item_name)
-		tooltip.visible = is_hovering
+	pass
 
 func add_item_from_world(world_item): 
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
-	var inv_item: InventoryItem = inv_item_scene.instantiate()
-	world_item.amount =+ 1
-	inv_item.set_data(
-		world_item.item_name,
-		world_item.icon,
-		world_item.is_stackable,
-		world_item.amount
-	)
+	world_item.amount += 1
+	if world_item.is_stackable:
+		for slot in slots:
+			if not slot.is_empty() and slot.item.item_name == world_item.item_name:
+				# Stack on existing item
+				slot.item.amount += 1
+				slot.item.label.text = str(slot.item.amount)
+				return
+				
 	for slot in slots:
-		if not world_item.is_in_inv == true :
+		if slot.is_empty():
+			var inv_item: InventoryItem = inv_item_scene.instantiate()
+			inv_item.set_data(
+				world_item.item_name,
+				world_item.icon,
+				world_item.is_stackable,
+				world_item.amount
+			)
 			slot.item = inv_item
 			slot.add_child(inv_item)
 			return
-		else:
-			pass
