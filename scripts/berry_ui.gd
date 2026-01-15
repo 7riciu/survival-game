@@ -1,11 +1,11 @@
 extends Label
 
-var berry = 0
+var amount = 0
  
 func berry_collect():
-	berry += 1
-	self.text = "Berries: " + str(berry)
+	amount += 1
+	self.text = "Berries: " + str(amount)
 	
 func berry_eat():
-	berry -= 1
-	self.text = "Berries: " + str(berry)
+	amount -= 1
+	self.text = "Berries: " + str(amount)

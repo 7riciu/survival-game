@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cg2ibf6tctsqv"]
 
-[ext_resource type="Script" uid="uid://dtevubrq23ebi" path="res://scripts/small_rock.gd" id="1_tuldt"]
+[ext_resource type="Script" uid="uid://dtevubrq23ebi" path="res://scripts/stone.gd" id="1_tuldt"]
 [ext_resource type="Texture2D" uid="uid://cybhhlsqlmug" path="res://assets/stone.png" id="2_f651v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5x16"]
@@ -21,7 +21,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_2pysc"]
 radius = 37.0
 
-[node name="stone" type="Area2D"]
+[node name="stone" type="Area2D" groups=["stone"]]
 script = ExtResource("1_tuldt")
 item_name = "stone"
 icon = ExtResource("2_f651v")

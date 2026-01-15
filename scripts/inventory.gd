@@ -50,3 +50,16 @@ func add_item_from_world(world_item):
 			slot.item = inv_item
 			slot.add_child(inv_item)
 			return
+
+func remove_item(item_name: String, amount_to_remove: int):
+	for slot in slots:
+		if not slot.is_empty() and slot.item.item_name == item_name:
+			slot.item.amount -= amount_to_remove
+
+			if slot.item.amount <= 0:
+				slot.item.queue_free()
+				slot.item = null
+			else:
+				slot.item.label.text = str(slot.item.amount)
+
+			return

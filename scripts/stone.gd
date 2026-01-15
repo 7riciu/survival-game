@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func on_body_entered(body):
 	if body.is_in_group("player"):
-		body.pick_up_item(self)
 		stone_ui.stone_count()
+		amount = stone_ui.amount
+		body.pick_up_item(self)
 		queue_free()
