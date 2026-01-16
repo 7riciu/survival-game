@@ -9,5 +9,3 @@ var recipe
 func setup(id, data):
 	item_id = id
 	recipe = data
-	image.texture = data.texture
-	

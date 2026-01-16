@@ -4,14 +4,22 @@
 [ext_resource type="Texture2D" uid="uid://da86lfs60tona" path="res://assets/slot.png" id="2_wkp4j"]
 
 [node name="Crafting_item" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
+custom_minimum_size = Vector2(300, 100)
+anchors_preset = -1
+anchor_right = 0.16800001
+anchor_bottom = 0.108
+offset_right = -0.5600281
+offset_bottom = 0.3600006
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_an03w")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 218.0
-offset_bottom = 88.0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 109.0
+offset_bottom = 100.0
 texture = ExtResource("2_wkp4j")
 
 [node name="Label" type="Label" parent="."]
