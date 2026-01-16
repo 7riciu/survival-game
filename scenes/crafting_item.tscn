@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppohqg0s1wpg"]
+
+[ext_resource type="Script" uid="uid://cm35d87aujbas" path="res://scripts/crafting_item.gd" id="1_an03w"]
+[ext_resource type="Texture2D" uid="uid://da86lfs60tona" path="res://assets/slot.png" id="2_wkp4j"]
+
+[node name="Crafting_item" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_an03w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 218.0
+offset_bottom = 88.0
+texture = ExtResource("2_wkp4j")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

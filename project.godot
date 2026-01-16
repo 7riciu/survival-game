@@ -15,6 +15,10 @@ run/main_scene="uid://b4esk8eblrhvn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+recipes="*res://crafting_recipes.gd"
+
 [display]
 
 window/size/viewport_width=1920
