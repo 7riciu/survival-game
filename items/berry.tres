@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cfydlvcfg652u"]
+
+[ext_resource type="Texture2D" uid="uid://ceuc8b8jl0msh" path="res://assets/berry.png" id="1_0hv32"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_tv1d7"]
+
+[resource]
+script = ExtResource("2_tv1d7")
+id = "berry"
+display_name = "berry"
+icon = ExtResource("1_0hv32")

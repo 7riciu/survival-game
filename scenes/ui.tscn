@@ -1,11 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://ddckudl6jhlc2"]
 
-[ext_resource type="Script" uid="uid://cay5uxx4kfohf" path="res://scripts/stone_ui.gd" id="1_8dubc"]
-[ext_resource type="Script" uid="uid://dbyc4oejeqqjk" path="res://scripts/wood_ui.gd" id="1_nt7q6"]
 [ext_resource type="Script" uid="uid://gwybqpokg854" path="res://scripts/health_ui.gd" id="2_x4jx1"]
 [ext_resource type="Script" uid="uid://d3degbt5mne77" path="res://scripts/hunger_ui.gd" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://bu4p6m0k68h5m" path="res://scripts/thirst_ui.gd" id="4_gdt2y"]
-[ext_resource type="Script" uid="uid://x4oy4ro6bvqx" path="res://scripts/berry_ui.gd" id="5_wm3ai"]
 [ext_resource type="Script" uid="uid://bxm30oci8mlcx" path="res://scripts/axe.gd" id="7_p7vwb"]
 [ext_resource type="Script" uid="uid://cxf6rismvej6m" path="res://scripts/pickaxe.gd" id="8_ktti3"]
 [ext_resource type="Script" uid="uid://csjqh0nu6koci" path="res://scripts/sword.gd" id="9_cgfq5"]
@@ -20,6 +17,40 @@
 [ext_resource type="Texture2D" uid="uid://bere6hsd7d6mr" path="res://assets/thirst bar.png" id="17_ycmcx"]
 [ext_resource type="PackedScene" uid="uid://b0u27jjfpiqce" path="res://scenes/crafting_button.tscn" id="19_jkdwc"]
 
+[sub_resource type="GDScript" id="GDScript_f7tlh"]
+script/source = "extends Label
+
+var amount = 0
+
+func stone_count():
+	amount += 2
+	self.text = \"Stone: \" + str(amount)
+"
+
+[sub_resource type="GDScript" id="GDScript_cof4p"]
+script/source = "extends Label
+
+var amount = 0
+
+func tree_wood_count():
+	amount += 10
+	self.text = \"Wood: \" + str(amount)
+"
+
+[sub_resource type="GDScript" id="GDScript_8k7j3"]
+script/source = "extends Label
+
+var amount = 0
+ 
+func berry_collect():
+	amount += 1
+	self.text = \"Berries: \" + str(amount)
+	
+func berry_eat():
+	amount -= 1
+	self.text = \"Berries: \" + str(amount)
+"
+
 [node name="UI" type="CanvasLayer"]
 
 [node name="stone count" type="Label" parent="." groups=["stone_ui"]]
@@ -28,7 +59,7 @@ offset_top = 140.0
 offset_right = 111.0
 offset_bottom = 163.0
 text = "Stone: 0"
-script = ExtResource("1_8dubc")
+script = SubResource("GDScript_f7tlh")
 
 [node name="wood count" type="Label" parent="." groups=["wood_ui"]]
 anchors_preset = -1
@@ -39,7 +70,7 @@ offset_top = 18.0
 offset_right = 6.6399994
 offset_bottom = 18.32
 text = "Wood: 0"
-script = ExtResource("1_nt7q6")
+script = SubResource("GDScript_cof4p")
 
 [node name="health" type="Label" parent="." groups=["health_ui"]]
 offset_left = 15.0
@@ -71,7 +102,7 @@ offset_top = 117.0
 offset_right = 109.0
 offset_bottom = 140.0
 text = "Berries: 0"
-script = ExtResource("5_wm3ai")
+script = SubResource("GDScript_8k7j3")
 
 [node name="axe" type="Button" parent="."]
 offset_left = 652.0

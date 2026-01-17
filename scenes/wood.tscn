@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://csq3yprway6ph"]
+[gd_scene load_steps=7 format=3 uid="uid://csq3yprway6ph"]
 
 [ext_resource type="Script" uid="uid://cefbu06x2x7jp" path="res://wood.gd" id="1_d45ue"]
 [ext_resource type="Texture2D" uid="uid://hgiphjds65li" path="res://assets/wood.png" id="1_y25wi"]
+[ext_resource type="Resource" uid="uid://mob5lsnxb6ku" path="res://items/wood.tres" id="2_es2n6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d45ue"]
 atlas = ExtResource("1_y25wi")
@@ -23,8 +24,7 @@ radius = 49.0306
 
 [node name="wood" type="Area2D" groups=["wood"]]
 script = ExtResource("1_d45ue")
-item_name = "Wood"
-icon = ExtResource("1_y25wi")
+item = ExtResource("2_es2n6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_es2n6")

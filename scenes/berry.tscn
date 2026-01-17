@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://rpaxtffl7ohy"]
+[gd_scene load_steps=7 format=3 uid="uid://rpaxtffl7ohy"]
 
 [ext_resource type="Script" uid="uid://bvdqeem3huywj" path="res://scripts/berry.gd" id="1_1kxkh"]
 [ext_resource type="Texture2D" uid="uid://ceuc8b8jl0msh" path="res://assets/berry.png" id="2_1kxkh"]
+[ext_resource type="Resource" uid="uid://cfydlvcfg652u" path="res://items/berry.tres" id="2_vcmpl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivy86"]
 atlas = ExtResource("2_1kxkh")
@@ -23,8 +24,7 @@ radius = 40.0
 
 [node name="berry" type="Area2D" groups=["berry"]]
 script = ExtResource("1_1kxkh")
-item_name = "Berry"
-icon = ExtResource("2_1kxkh")
+item = ExtResource("2_vcmpl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vcmpl")
