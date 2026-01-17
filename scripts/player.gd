@@ -72,6 +72,3 @@ func health_decrese_by_wolf():
 		health_ui.health_update()
 		health_bar.value = health
 		print(health)
-	
-func pick_up_item(world_item):
-	inventory_data.add(world_item.item, world_item.amount)

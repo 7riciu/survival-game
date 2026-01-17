@@ -4,9 +4,6 @@ class_name InventoryItems
 signal changed
 var items := {}
 
-func _ready():
-	print("InventoryData loaded")
-
 func add(item: ItemData, amount := 1):
 	items[item] = items.get(item, 0) + amount
 	emit_signal("changed")

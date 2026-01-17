@@ -14,3 +14,8 @@ func set_from_item_data(item: ItemData, amount_value: int):
 	icon = item.icon
 	is_stackable = item.stackable
 	amount = amount_value
+
+	$Sprite2D.texture = icon
+
+	$Label.visible = true
+	$Label.text = str(amount)

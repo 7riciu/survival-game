@@ -11,31 +11,20 @@ var slots: Array = []
 func _ready() -> void:
 	inventory_grid.columns = cols
 
-	# Create slots
 	for i in range(rows * cols):
 		var slot = inventory_slot_scene.instantiate()
 		slots.append(slot)
 		inventory_grid.add_child(slot)
 
-	# Connect to Inventory autoload signal
 	inventory_data.changed.connect(refresh)
-
-	# Initial refresh
+	
 	refresh()
 
 func refresh():
-	# Clear all current slot items
-	for slot in slots:
-		if slot.item:
-			slot.item.queue_free()
-			slot.item = null
-
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
-
-	# Display items from Inventory autoload
 	var index = 0
+
 	for item_data in inventory_data.items.keys():
-		# Safety check
 		if item_data == null:
 			continue
 
@@ -43,6 +32,12 @@ func refresh():
 			break
 
 		var inv_item: InventoryItem = inv_item_scene.instantiate()
+
+		print("ItemData:", item_data)
+		print("Amount:", inventory_data.items[item_data])
+		print("InvItem:", inv_item)
+		print("InvItem sprite:", inv_item.sprite)
+
 		inv_item.set_from_item_data(item_data, inventory_data.items[item_data])
 
 		slots[index].item = inv_item

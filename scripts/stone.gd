@@ -8,5 +8,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		inventory_data.add(item, amount)
-		queue_free()
+		if item != null:
+			inventory_data.add(item, amount)
+			queue_free()
+		else:
+			print("Warning: Pickup has no ItemData assigned!")
