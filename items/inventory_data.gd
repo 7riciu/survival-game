@@ -12,7 +12,7 @@ func remove(item: ItemData, amount):
 	if not items.has(item):
 		return
 
-	items[item] -= amount
+	items[item] = items.get(item, 0) - amount
 	if items[item] <= 0:
 		items.erase(item)
 
