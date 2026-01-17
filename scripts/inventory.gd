@@ -1,8 +1,6 @@
 extends Control
 class_name  Inventory
 
-var inventory_item_scene = preload("res://scenes/inventory_slot.tscn")
-
 var rows: int = 1
 var cols: int = 10
 
@@ -23,10 +21,6 @@ func _ready() -> void:
 		var slot = inventory_slot_scene.instantiate()
 		slots.append(slot)
 		inventory_grid.add_child(slot)
-	tooltip.visible = false
-
-func _process(_delta: float) -> void:
-	pass
 
 func add_item_from_world(world_item): 
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")

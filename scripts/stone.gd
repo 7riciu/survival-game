@@ -6,7 +6,8 @@ extends Area2D
 @export var icon: Texture2D
 @export var is_stackable: bool = true
 
-var amount = 0
+@export var item: ItemData
+@export var amount := 1
 
 func _ready() -> void:
 	add_to_group("items")
@@ -14,7 +15,4 @@ func _ready() -> void:
 
 func on_body_entered(body):
 	if body.is_in_group("player"):
-		stone_ui.stone_count()
-		amount = stone_ui.amount
-		body.pick_up_item(self)
-		queue_free()
+		inventoryData.add(item, amount)
