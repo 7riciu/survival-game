@@ -33,11 +33,6 @@ func refresh():
 
 		var inv_item: InventoryItem = inv_item_scene.instantiate()
 
-		print("ItemData:", item_data)
-		print("Amount:", inventory_data.items[item_data])
-		print("InvItem:", inv_item)
-		print("InvItem sprite:", inv_item.sprite)
-
 		inv_item.set_from_item_data(item_data, inventory_data.items[item_data])
 
 		slots[index].item = inv_item

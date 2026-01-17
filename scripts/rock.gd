@@ -9,7 +9,7 @@ var has_stone = true
 
 func _process(_delta: float) -> void:
 	if rock_area.can_collect_stone and stone_stock > 0 and Input.is_action_just_pressed("e"):
-		stone_stock -= 2
+		stone_stock -= player.pickaxe_power
 		var stone = stone_scene.instantiate()
 		stone.global_position = self.global_position + Vector2(0, 90)
 		get_tree().current_scene.add_child(stone)

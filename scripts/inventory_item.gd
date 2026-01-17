@@ -1,9 +1,6 @@
 extends Control
 class_name InventoryItem
 
-@onready var sprite: Sprite2D = $Sprite2D
-@onready var label: Label = $Label
-
 var item_name: String
 var icon: Texture2D
 var is_stackable: bool = true

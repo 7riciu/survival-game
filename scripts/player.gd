@@ -18,7 +18,7 @@ var hunger = 100
 var thirst = 100
 
 var axe_power = 10
-var pickaxe_power = 10
+var pickaxe_power = 2
 var sword_power = 10
 
 func _ready() -> void:
@@ -71,4 +71,3 @@ func health_decrese_by_wolf():
 		health -= 10
 		health_ui.health_update()
 		health_bar.value = health
-		print(health)
