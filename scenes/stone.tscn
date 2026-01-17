@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg2ibf6tctsqv"]
+[gd_scene load_steps=7 format=3 uid="uid://cg2ibf6tctsqv"]
 
 [ext_resource type="Script" uid="uid://dtevubrq23ebi" path="res://scripts/stone.gd" id="1_tuldt"]
+[ext_resource type="Resource" uid="uid://b6pco7fv8hrrv" path="res://items/stone.tres" id="2_6niw0"]
 [ext_resource type="Texture2D" uid="uid://cybhhlsqlmug" path="res://assets/stone.png" id="2_f651v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5x16"]
@@ -23,8 +24,7 @@ radius = 37.0
 
 [node name="stone" type="Area2D" groups=["stone"]]
 script = ExtResource("1_tuldt")
-item_name = "stone"
-icon = ExtResource("2_f651v")
+item = ExtResource("2_6niw0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e5x16")

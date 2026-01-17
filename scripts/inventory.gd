@@ -1,59 +1,50 @@
 extends Control
-class_name  Inventory
+class_name Inventory
 
 var rows: int = 1
 var cols: int = 10
 
-var inventory_content = {}
-
-@onready var inv_item_label = get_tree().get_first_node_in_group("inv_item_label")
 @onready var inventory_grid: GridContainer = $GridContainer
-@onready var tooltip: Tooltip = $Tooltip
-
 var inventory_slot_scene: PackedScene = preload("res://scenes/inventory_slot.tscn")
-var slots: Array[InventorySlot] = []
-
-static var selected_item: InventoryItem = null
+var slots: Array = []
 
 func _ready() -> void:
 	inventory_grid.columns = cols
+
+	# Create slots
 	for i in range(rows * cols):
 		var slot = inventory_slot_scene.instantiate()
 		slots.append(slot)
 		inventory_grid.add_child(slot)
 
-func add_item_from_world(world_item): 
+	# Connect to Inventory autoload signal
+	inventory_data.changed.connect(refresh)
+
+	# Initial refresh
+	refresh()
+
+func refresh():
+	# Clear all current slot items
+	for slot in slots:
+		if slot.item:
+			slot.item.queue_free()
+			slot.item = null
+
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
 
-	if world_item.is_stackable:
-		for slot in slots:
-			if not slot.is_empty() and slot.item.item_name == world_item.item_name:
-				slot.item.amount = world_item.amount
-				slot.item.label.text = str(slot.item.amount)
-				return
-				
-	for slot in slots:
-		if slot.is_empty():
-			var inv_item: InventoryItem = inv_item_scene.instantiate()
-			inv_item.set_data(
-				world_item.item_name,
-				world_item.icon,
-				world_item.is_stackable,
-				world_item.amount
-			)
-			slot.item = inv_item
-			slot.add_child(inv_item)
-			return
+	# Display items from Inventory autoload
+	var index = 0
+	for item_data in inventory_data.items.keys():
+		# Safety check
+		if item_data == null:
+			continue
 
-func remove_item(item_name: String, amount_to_remove: int):
-	for slot in slots:
-		if not slot.is_empty() and slot.item.item_name == item_name:
-			slot.item.amount -= amount_to_remove
+		if index >= slots.size():
+			break
 
-			if slot.item.amount <= 0:
-				slot.item.queue_free()
-				slot.item = null
-			else:
-				slot.item.label.text = str(slot.item.amount)
+		var inv_item: InventoryItem = inv_item_scene.instantiate()
+		inv_item.set_from_item_data(item_data, inventory_data.items[item_data])
 
-			return
+		slots[index].item = inv_item
+		slots[index].add_child(inv_item)
+		index += 1

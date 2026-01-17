@@ -73,6 +73,5 @@ func health_decrese_by_wolf():
 		health_bar.value = health
 		print(health)
 	
-func pick_up_item(item):
-	var inv = get_tree().get_first_node_in_group("inventory")
-	inv.add_item_from_world(item)
+func pick_up_item(world_item):
+	inventory_data.add(world_item.item, world_item.amount)
