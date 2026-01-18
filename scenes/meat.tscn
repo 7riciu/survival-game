@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://xgihdsitiw16"]
+[gd_scene load_steps=7 format=3 uid="uid://xgihdsitiw16"]
 
 [ext_resource type="Script" uid="uid://bpsnf5rsplhrg" path="res://scripts/meat.gd" id="1_5xyno"]
 [ext_resource type="Texture2D" uid="uid://qacpd2hvtqvi" path="res://assets/meat.png" id="2_5xyno"]
+[ext_resource type="Resource" uid="uid://cxrnco7gturv0" path="res://items/meat.tres" id="2_jh885"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jh885"]
 atlas = ExtResource("2_5xyno")
@@ -23,7 +24,7 @@ radius = 50.039986
 
 [node name="meat" type="Area2D"]
 script = ExtResource("1_5xyno")
-icon = ExtResource("2_5xyno")
+item = ExtResource("2_jh885")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jh885")

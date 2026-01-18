@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cbp8jva7b2pim"]
+
+[ext_resource type="Texture2D" uid="uid://bb12ddvg05gww" path="res://assets/fur.png" id="1_oofhg"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_70agq"]
+
+[resource]
+script = ExtResource("2_70agq")
+id = "fur"
+display_name = "fur"
+icon = ExtResource("1_oofhg")

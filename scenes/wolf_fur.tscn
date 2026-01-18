@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cf3iyxgclpl0n"]
+[gd_scene load_steps=7 format=3 uid="uid://cf3iyxgclpl0n"]
 
 [ext_resource type="Script" uid="uid://beuxmtklqqk3e" path="res://scripts/wolf_fur.gd" id="1_sh185"]
+[ext_resource type="Resource" uid="uid://cbp8jva7b2pim" path="res://items/fur.tres" id="2_02s42"]
 [ext_resource type="Texture2D" uid="uid://bb12ddvg05gww" path="res://assets/fur.png" id="2_sh185"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_02s42"]
@@ -23,8 +24,7 @@ radius = 46.09772
 
 [node name="woolf_fur" type="Area2D"]
 script = ExtResource("1_sh185")
-item_name = "Fur"
-icon = ExtResource("2_sh185")
+item = ExtResource("2_02s42")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_loees")

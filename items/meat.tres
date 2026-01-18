@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cxrnco7gturv0"]
+
+[ext_resource type="Texture2D" uid="uid://qacpd2hvtqvi" path="res://assets/meat.png" id="1_yb1o0"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_1j14l"]
+
+[resource]
+script = ExtResource("2_1j14l")
+id = "meat"
+display_name = "meat"
+icon = ExtResource("1_yb1o0")
