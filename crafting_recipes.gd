@@ -4,7 +4,7 @@ const RECIPES = {
 	"sword": {
 		"icon": preload("res://assets/pickaxe.png"),
 		"description": "sword",
-		"action": "buy_sword",
+		"action": "craft_sword",
 		"requires": {
 			"wood": 10,
 			"stone": 10
@@ -14,7 +14,7 @@ const RECIPES = {
 	"pickaxe": {
 		"icon": preload("res://assets/pickaxe.png"),
 		"description": "pickaxe",
-		"action": "buy_pickaxe",
+		"action": "craft_pickaxe",
 		"requires": {
 			"wood": 10,
 			"stone": 10
@@ -24,10 +24,19 @@ const RECIPES = {
 	"axe": {
 		"icon": preload("res://assets/pickaxe.png"),
 		"description": "axe",
-		"action": "buy_axe",
+		"action": "craft_axe",
 		"requires": {
 			"wood": 10,
 			"stone": 10
+		}
+	},
+	
+	"campfire": {
+		"icon": preload("res://assets/pickaxe.png"),
+		"description": "campfire",
+		"action": "craft_campfire",
+		"requires": {
+			"wood": 10
 		}
 	}
 }
