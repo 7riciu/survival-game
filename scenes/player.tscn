@@ -33,3 +33,6 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 12)
 shape = SubResource("CapsuleShape2D_31cv2")
+
+[node name="Hand" type="Node2D" parent="." groups=["player_hand"]]
+position = Vector2(66, 114)

@@ -8,3 +8,4 @@ script = ExtResource("2_o1dmp")
 id = "axe"
 display_name = "axe"
 icon = ExtResource("1_vijfb")
+holdable = true

@@ -8,6 +8,9 @@ var cols: int = 10
 var inventory_slot_scene: PackedScene = preload("res://scenes/inventory_slot.tscn")
 var slots: Array = []
 
+@onready var player_hand =  get_tree().get_first_node_in_group("player_hand")
+@onready var held_item = null
+
 func _ready() -> void:
 	inventory_grid.columns = cols
 
@@ -23,6 +26,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("slot 1"):
 		select(slots[0].item)
+	if Input.is_action_just_pressed("slot 2"):
+		select(slots[1].item)
+	if Input.is_action_just_pressed("slot 3"):
+		select(slots[2].item)
 
 func refresh():
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
@@ -47,8 +54,22 @@ func refresh():
 		print(slots[0].item.item_name)
 
 func select(itm):
+	if itm == null:
+		return
+	
+	if held_item != null:
+		held_item.queue_free()
+		held_item = null
+
 	if itm.is_holdable:
-		var holdable_item_scene = preload()
-		
-	
-	
+		var holdable_item_name = itm.item_name.to_lower()
+		var scene: PackedScene = load("res://scenes/" + holdable_item_name + ".tscn")
+
+		if scene == null:
+			push_error("Scene not found for item: " + holdable_item_name)
+			return
+
+		var instance = scene.instantiate()
+		player_hand.add_child(instance)
+		instance.position = Vector2.ZERO
+		held_item = instance

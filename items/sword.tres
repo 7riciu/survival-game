@@ -8,3 +8,4 @@ script = ExtResource("2_s2bgj")
 id = "sword"
 display_name = "sword"
 icon = ExtResource("1_bikib")
+holdable = true
