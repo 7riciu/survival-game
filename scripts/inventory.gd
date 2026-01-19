@@ -20,6 +20,10 @@ func _ready() -> void:
 	
 	refresh()
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("slot 1"):
+		select(slots[0].item)
+
 func refresh():
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
 	
@@ -40,3 +44,11 @@ func refresh():
 		slots[index].item = inv_item
 		slots[index].add_child(inv_item)
 		index += 1
+		print(slots[0].item.item_name)
+
+func select(itm):
+	if itm.is_holdable:
+		var holdable_item_scene = preload()
+		
+	
+	

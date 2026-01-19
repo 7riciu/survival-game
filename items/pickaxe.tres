@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dw8t85ratw6w3"]
+
+[ext_resource type="Texture2D" uid="uid://d1ejn2c17mv4r" path="res://assets/pickaxe.png" id="1_ixunl"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_0tumq"]
+
+[resource]
+script = ExtResource("2_0tumq")
+id = "pickaxe"
+display_name = "pickaxe"
+icon = ExtResource("1_ixunl")

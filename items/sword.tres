@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://623jwm14c7mh"]
+
+[ext_resource type="Texture2D" uid="uid://d1ejn2c17mv4r" path="res://assets/pickaxe.png" id="1_bikib"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_s2bgj"]
+
+[resource]
+script = ExtResource("2_s2bgj")
+id = "sword"
+display_name = "sword"
+icon = ExtResource("1_bikib")
