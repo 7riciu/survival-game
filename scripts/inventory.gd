@@ -22,17 +22,19 @@ func _ready() -> void:
 
 func refresh():
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
+	
+	for slot in slots:
+		if slot.item:
+			slot.item.queue_free()
+			slot.item = null
+	
 	var index = 0
 
 	for item_data in inventory_data.items.keys():
-		if item_data == null:
-			continue
-
 		if index >= slots.size():
 			break
 
 		var inv_item: InventoryItem = inv_item_scene.instantiate()
-
 		inv_item.set_from_item_data(item_data, inventory_data.items[item_data])
 
 		slots[index].item = inv_item
