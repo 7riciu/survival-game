@@ -51,7 +51,6 @@ func refresh():
 		slots[index].item = inv_item
 		slots[index].add_child(inv_item)
 		index += 1
-		print(slots[0].item.item_name)
 
 func select(itm):
 	if itm == null:
