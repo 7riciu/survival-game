@@ -8,6 +8,10 @@ var cols: int = 10
 var inventory_slot_scene: PackedScene = preload("res://scenes/inventory_slot.tscn")
 var slots: Array = []
 
+@export var berry_item: ItemData = preload("res://items/berry.tres")
+@onready var hunger_bar = get_tree().get_first_node_in_group("hunger_bar")
+@onready var player = get_tree().get_first_node_in_group("player")
+
 @onready var player_hand =  get_tree().get_first_node_in_group("player_hand")
 @onready var held_item = null
 
@@ -30,6 +34,20 @@ func _process(_delta: float) -> void:
 		select(slots[1].item)
 	if Input.is_action_just_pressed("slot 3"):
 		select(slots[2].item)
+	if Input.is_action_just_pressed("slot 4"):
+		select(slots[3].item)
+	if Input.is_action_just_pressed("slot 5"):
+		select(slots[4].item)
+	if Input.is_action_just_pressed("slot 6"):
+		select(slots[5].item)
+	if Input.is_action_just_pressed("slot 7"):
+		select(slots[6].item)
+	if Input.is_action_just_pressed("slot 8"):
+		select(slots[7].item)
+	if Input.is_action_just_pressed("slot 9"):
+		select(slots[8].item)
+	if Input.is_action_just_pressed("slot 10"):
+		select(slots[9].item)
 
 func refresh():
 	var inv_item_scene = preload("res://scenes/inventory_item.tscn")
@@ -72,3 +90,17 @@ func select(itm):
 		player_hand.add_child(instance)
 		instance.position = Vector2.ZERO
 		held_item = instance
+		
+	if itm.is_edible:
+		var holdable_item_name = itm.item_name.to_lower()
+		var scene: PackedScene = load("res://scenes/" + holdable_item_name + ".tscn")
+
+		if scene == null:
+			push_error("Scene not found for item: " + holdable_item_name)
+			return
+
+		player.hunger += 10
+		if player.hunger > 100:
+			player.hunger = 100
+		hunger_bar.value = player.hunger
+		inventory_data.remove(berry_item, 1)

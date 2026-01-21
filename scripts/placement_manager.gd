@@ -8,7 +8,6 @@ func _process(_delta: float) -> void:
 	if current_item:
 		if Input.is_action_just_pressed("e"):
 			can_drag = true
-			
 		if Input.is_action_just_pressed("r"):
 			can_drag = false
 		if can_drag:

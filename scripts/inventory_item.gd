@@ -5,6 +5,7 @@ var item_name: String
 var icon: Texture2D
 var is_stackable: bool = true
 var is_holdable: bool
+var is_edible: bool
 var amount: int = 0
 
 func set_from_item_data(item: ItemData, amount_value: int):
@@ -12,6 +13,7 @@ func set_from_item_data(item: ItemData, amount_value: int):
 	icon = item.icon
 	is_stackable = item.stackable
 	is_holdable = item.holdable
+	is_edible = item.edible
 	amount = amount_value
 
 	$Sprite2D.texture = icon
