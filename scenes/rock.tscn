@@ -26,6 +26,7 @@ size = Vector2(301, 91)
 radius = 210.94312
 
 [node name="rock" type="CharacterBody2D"]
+z_index = 3
 script = ExtResource("1_ik6fu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

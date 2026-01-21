@@ -26,6 +26,7 @@ size = Vector2(114, 110)
 size = Vector2(368, 337)
 
 [node name="tree" type="CharacterBody2D" groups=["tree"]]
+z_index = 2
 script = ExtResource("1_viusy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

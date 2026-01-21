@@ -39,6 +39,7 @@ size = Vector2(402, 120)
 size = Vector2(556, 396)
 
 [node name="bush" type="CharacterBody2D" groups=["bush"]]
+z_index = 3
 script = ExtResource("1_tu87o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

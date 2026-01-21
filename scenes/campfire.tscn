@@ -1,47 +1,31 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjh8baly3gel3"]
+[gd_scene load_steps=5 format=3 uid="uid://bjh8baly3gel3"]
 
 [ext_resource type="Texture2D" uid="uid://177k7js36oly" path="res://assets/campfire_fire.png" id="1_54scn"]
-[ext_resource type="Texture2D" uid="uid://fmb6erxkpnrd" path="res://assets/campfire_logs.png" id="2_yfrnb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8pk5p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m47ar"]
 atlas = ExtResource("1_54scn")
 region = Rect2(0, 0, 262, 274)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m6xh0"]
-atlas = ExtResource("2_yfrnb")
-region = Rect2(0, 0, 262, 274)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1v5ef"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_54scn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8pk5p")
+"texture": SubResource("AtlasTexture_m47ar")
 }],
 "loop": true,
-"name": &"burn",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m6xh0")
-}],
-"loop": true,
-"name": &"no_burn",
+"name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_63vhv"]
-size = Vector2(258, 89)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfrnb"]
+size = Vector2(262, 90)
 
-[node name="Campfire" type="Node2D" groups=["campfire"]]
+[node name="Campfire" type="Area2D"]
+z_index = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_1v5ef")
-animation = &"burn"
-autoplay = "burn"
+sprite_frames = SubResource("SpriteFrames_54scn")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 91.5)
-shape = SubResource("RectangleShape2D_63vhv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 93)
+shape = SubResource("RectangleShape2D_yfrnb")
