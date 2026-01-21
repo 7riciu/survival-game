@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var player = get_tree().get_first_node_in_group("player")
-@onready var health_ui = get_tree().get_first_node_in_group("health_ui")
 @onready var wolf_area = $Area2D
 @onready var fur_scene: PackedScene = preload("res://scenes/wolf_fur.tscn")
 @onready var meat_scene: PackedScene = preload("res://scenes/meat.tscn")
