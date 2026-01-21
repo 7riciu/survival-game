@@ -18,14 +18,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfrnb"]
-size = Vector2(262, 90)
+size = Vector2(260, 67)
 
-[node name="Campfire" type="Area2D"]
+[node name="Campfire" type="StaticBody2D"]
 z_index = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_54scn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 93)
+position = Vector2(0, 103.5)
 shape = SubResource("RectangleShape2D_yfrnb")
