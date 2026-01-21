@@ -40,6 +40,8 @@ sprite_frames = SubResource("SpriteFrames_1v5ef")
 animation = &"burn"
 autoplay = "burn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 91.5)
 shape = SubResource("RectangleShape2D_63vhv")
