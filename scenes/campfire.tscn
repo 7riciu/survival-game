@@ -33,7 +33,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_63vhv"]
 size = Vector2(258, 89)
 
-[node name="Campfire" type="Node2D"]
+[node name="Campfire" type="Node2D" groups=["campfire"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1v5ef")

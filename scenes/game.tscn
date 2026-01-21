@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=12 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://depikt0b02qx" path="res://scenes/lake.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c6pkfx3ea4e0d" path="res://scenes/tree.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dktme3fmfbojc" path="res://scenes/placement_manager.tscn" id="3_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddckudl6jhlc2" path="res://scenes/ui.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ckwvuyrgnghru" path="res://scenes/bush.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://d2u7yye4s1phg" path="res://assets/artlog 1.png" id="7_kvuet"]
@@ -281,6 +282,8 @@ z_index = 1
 position = Vector2(701, 533)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="Placement_Manager" parent="." instance=ExtResource("3_0tnpc")]
 
 [node name="tree" parent="." instance=ExtResource("2_yqjtg")]
 z_index = 2

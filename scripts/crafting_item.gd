@@ -59,3 +59,7 @@ func craft_axe():
 func craft_campfire():
 	if wood_amount >= 10:
 		inventory_data.remove(wood_item, 10)
+		var placer = get_tree().get_first_node_in_group("placement_manager")
+		var campfire_scene = load("res://scenes/campfire.tscn")
+		var spawn_pos = Vector2(400, 200)
+		placer.start_placing(campfire_scene, spawn_pos)
