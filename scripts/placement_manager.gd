@@ -1,6 +1,11 @@
-extends Node
+extends Node2D
 
 var current_item: Node2D = null
+
+func _process(_delta: float) -> void:
+	if current_item:
+		if Input.is_action_pressed("click"):
+			current_item.position = get_global_mouse_position()
 
 func start_placing(scene: PackedScene, position: Vector2):
 	if current_item:
