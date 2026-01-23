@@ -22,7 +22,7 @@ const RECIPES = {
 	},
 	
 	"axe": {
-		"icon": preload("res://assets/pickaxe.png"),
+		"icon": preload("res://assets/axe.png"),
 		"description": "axe",
 		"action": "craft_axe",
 		"requires": {
@@ -38,5 +38,15 @@ const RECIPES = {
 		"requires": {
 			"wood": 10
 		}
-	}
+	},
+	
+	"dragonfly_spade": {
+		"icon": preload("res://assets/dragonfly.png"),
+		"description": "dragonfly spade",
+		"action": "craft_dragonfly_spade",
+		"requires": {
+			"dragonfly": 100,
+			"wood": 10
+		}
+	},
 }
