@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ckwvuyrgnghru" path="res://scenes/bush.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://d2u7yye4s1phg" path="res://assets/artlog 1.png" id="7_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cif56t0m63o21" path="res://scenes/rock.tscn" id="8_gee14"]
-[ext_resource type="PackedScene" uid="uid://nipljqkcopit" path="res://scenes/flower_ring.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://nipljqkcopit" path="res://scenes/fairy_ring.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/wolf.tscn" id="15_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]

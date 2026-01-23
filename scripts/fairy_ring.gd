@@ -18,7 +18,7 @@ func on_body_exited(body):
 	if body.is_in_group("player"):
 		can_bless = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if can_bless and Input.is_action_just_pressed("e"):
 			player.health = 100
 			health_bar.value = 100

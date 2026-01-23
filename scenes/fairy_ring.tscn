@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://nipljqkcopit"]
 
-[ext_resource type="Script" uid="uid://cdy6afmsevupm" path="res://scripts/flower_ring.gd" id="1_uliyj"]
-[ext_resource type="Texture2D" uid="uid://vru8l24wl25t" path="res://assets/lake.png" id="2_xxofp"]
+[ext_resource type="Script" uid="uid://cdy6afmsevupm" path="res://scripts/fairy_ring.gd" id="1_uliyj"]
+[ext_resource type="Texture2D" uid="uid://b0aqv0puxiet7" path="res://assets/fairy_ring.PNG" id="2_vpxoe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jeskq"]
-atlas = ExtResource("2_xxofp")
-region = Rect2(0, 0, 637, 341)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhn6y"]
+atlas = ExtResource("2_vpxoe")
+region = Rect2(0, 0, 723, 464)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n2tmm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jeskq")
+"texture": SubResource("AtlasTexture_dhn6y")
 }],
 "loop": true,
 "name": &"default",
@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykp4m"]
-size = Vector2(391, 127)
+size = Vector2(351, 165)
 
 [node name="Flower_ring" type="Area2D"]
 script = ExtResource("1_uliyj")
@@ -28,5 +28,5 @@ script = ExtResource("1_uliyj")
 sprite_frames = SubResource("SpriteFrames_n2tmm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -0.5)
+position = Vector2(-7.5, -16.5)
 shape = SubResource("RectangleShape2D_ykp4m")

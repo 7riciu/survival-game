@@ -7,3 +7,4 @@ class_name ItemData
 @export var stackable := true
 @export var edible: bool
 @export var holdable: bool
+@export var cookable: bool
