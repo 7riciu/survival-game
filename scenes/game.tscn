@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=13 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://depikt0b02qx" path="res://scenes/lake.tscn" id="2_lbhrr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ckwvuyrgnghru" path="res://scenes/bush.tscn" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://d2u7yye4s1phg" path="res://assets/artlog 1.png" id="7_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cif56t0m63o21" path="res://scenes/rock.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://nipljqkcopit" path="res://scenes/flower_ring.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/wolf.tscn" id="15_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
@@ -312,3 +313,6 @@ position = Vector2(-37, 942)
 [node name="rock" parent="." instance=ExtResource("8_gee14")]
 z_index = 2
 position = Vector2(480, 920)
+
+[node name="Flower_ring" parent="." instance=ExtResource("10_vtaks")]
+position = Vector2(1006, 1069)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://nipljqkcopit"]
+
+[ext_resource type="Script" uid="uid://cdy6afmsevupm" path="res://scripts/flower_ring.gd" id="1_uliyj"]
+[ext_resource type="Texture2D" uid="uid://vru8l24wl25t" path="res://assets/lake.png" id="2_xxofp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeskq"]
+atlas = ExtResource("2_xxofp")
+region = Rect2(0, 0, 637, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2tmm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jeskq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykp4m"]
+size = Vector2(391, 127)
+
+[node name="Flower_ring" type="Area2D"]
+script = ExtResource("1_uliyj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n2tmm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_ykp4m")

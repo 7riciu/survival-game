@@ -55,7 +55,7 @@ func thirst_decrease_by_time():
 		if not lake.can_drink:
 			pass
 		elif lake.can_drink and thirst < 100:
-			thirst += 4
+			thirst += 12
 			thirst_bar.value = thirst
 			if thirst >= 100:
 				thirst = 100
