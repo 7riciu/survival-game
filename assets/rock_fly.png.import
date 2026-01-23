@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://24rwniownsqt"
-path="res://.godot/imported/rock_fly.PNG-a5ee9fb1395e982f9b3e1b17f92e25a3.ctex"
+uid="uid://ctms7xu2yfxgb"
+path="res://.godot/imported/rock_fly.png-7047c405826e842f6a631d3fdd32664e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://rock_fly.PNG"
-dest_files=["res://.godot/imported/rock_fly.PNG-a5ee9fb1395e982f9b3e1b17f92e25a3.ctex"]
+source_file="res://assets/rock_fly.png"
+dest_files=["res://.godot/imported/rock_fly.png-7047c405826e842f6a631d3fdd32664e.ctex"]
 
 [params]
 

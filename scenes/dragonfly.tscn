@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfvnkesxpoqhb"]
+
+[ext_resource type="Script" uid="uid://bvvh0daa8w64q" path="res://scripts/dragonfly.gd" id="1_br0up"]
+[ext_resource type="Resource" uid="uid://7knpp0mugtrx" path="res://items/dragonfly.tres" id="2_gvtvj"]
+[ext_resource type="Texture2D" uid="uid://bqnee2um3t6oo" path="res://assets/dragonfly.png" id="3_gvtvj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvtvj"]
+atlas = ExtResource("3_gvtvj")
+region = Rect2(0, 0, 74, 69)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5x16"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvtvj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pysc"]
+radius = 40.04997
+
+[node name="dragonfly" type="Area2D" groups=["dragonfly"]]
+script = ExtResource("1_br0up")
+item = ExtResource("2_gvtvj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e5x16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_2pysc")

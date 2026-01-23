@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://7q3i13fa5v31"]
+
+[ext_resource type="Script" uid="uid://c83iqgyc5h4wy" path="res://scripts/rock_fly.gd" id="1_l5plu"]
+[ext_resource type="Texture2D" uid="uid://ctms7xu2yfxgb" path="res://assets/rock_fly.png" id="2_l5plu"]
+[ext_resource type="Script" uid="uid://bt7rcfiph6uw5" path="res://scripts/rock_fly_area.gd" id="3_l5plu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mmtf"]
+atlas = ExtResource("2_l5plu")
+region = Rect2(0, 0, 471, 330)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ik6fu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mmtf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_872ht"]
+size = Vector2(442, 329)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2d0s"]
+radius = 278.0072
+
+[node name="rock_fly" type="CharacterBody2D"]
+z_index = 3
+script = ExtResource("1_l5plu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ik6fu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_872ht")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_l5plu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_p2d0s")

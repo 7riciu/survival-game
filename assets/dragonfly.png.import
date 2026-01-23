@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1lbjfy2wdk8a"
-path="res://.godot/imported/dragonfly.PNG-a86550a0b789fe15eecdc642dddf954c.ctex"
+uid="uid://bqnee2um3t6oo"
+path="res://.godot/imported/dragonfly.png-039eff549e7f96aa97c4bd7544543717.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dragonfly.PNG"
-dest_files=["res://.godot/imported/dragonfly.PNG-a86550a0b789fe15eecdc642dddf954c.ctex"]
+source_file="res://assets/dragonfly.png"
+dest_files=["res://.godot/imported/dragonfly.png-039eff549e7f96aa97c4bd7544543717.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://7knpp0mugtrx"]
+
+[ext_resource type="Texture2D" uid="uid://bqnee2um3t6oo" path="res://assets/dragonfly.png" id="1_8pgos"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_8qelp"]
+
+[resource]
+script = ExtResource("2_8qelp")
+id = "dragonfly"
+display_name = "dragonfly"
+icon = ExtResource("1_8pgos")
