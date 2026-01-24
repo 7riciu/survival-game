@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bydwj3tlbgsbq"]
+
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="1_2jpt2"]
+[ext_resource type="Texture2D" uid="uid://cc6qxc4x3lyc4" path="res://assets/hunger bar.png" id="1_527q1"]
+
+[resource]
+script = ExtResource("1_2jpt2")
+id = "coin"
+display_name = "coin"
+icon = ExtResource("1_527q1")
