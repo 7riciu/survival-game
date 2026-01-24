@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=15 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://depikt0b02qx" path="res://scenes/lake.tscn" id="2_lbhrr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cif56t0m63o21" path="res://scenes/rock.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://nipljqkcopit" path="res://scenes/fairy_ring.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://7q3i13fa5v31" path="res://scenes/rock_fly.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://c1ww8pi02sxi5" path="res://scenes/merchant.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/wolf.tscn" id="15_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
@@ -299,11 +300,11 @@ position = Vector2(-309, 678)
 position = Vector2(901, -129)
 
 [node name="bush2" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(510, 318)
+position = Vector2(-512, 198)
 
 [node name="woolf" parent="." instance=ExtResource("15_ir15t")]
 z_index = 1
-position = Vector2(24, 392)
+position = Vector2(-1214, 945)
 
 [node name="bush3" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(1256, 646)
@@ -320,3 +321,6 @@ position = Vector2(1006, 1069)
 
 [node name="rock_fly" parent="." instance=ExtResource("11_kvpfn")]
 position = Vector2(-38, -294)
+
+[node name="Merchant" parent="." instance=ExtResource("12_dinhu")]
+position = Vector2(388, 255)

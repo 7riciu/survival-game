@@ -19,11 +19,13 @@ config/icon="res://icon.svg"
 
 inventory_data="*res://items/inventory_data.gd"
 recipes="*res://scripts/crafting_recipes.gd"
+dialogues="*res://scripts/dialogues.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
