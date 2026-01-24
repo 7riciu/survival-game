@@ -8,3 +8,4 @@ script = ExtResource("2_70agq")
 id = "fur"
 display_name = "fur"
 icon = ExtResource("1_oofhg")
+sell_price = 10

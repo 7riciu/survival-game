@@ -5,16 +5,16 @@ const dialogue = {
 		"text": "Hello! I'm the merchant.",
 		"choices": [
 			{ "text": "Next",
-			"next": "start2" }
+			"next": "options" }
 		]
 	},
-	"start2": {
+	"options": {
 		"text": "How can I help you?",
 		"choices": [
-			{ "text": "Shop",
-			"action": "shop"},
-			{ "text": "Back",
-			"action": "start"}
+			{ "text": "Sell",
+			"action": "sell"},
+			{ "text": "Leave",
+			"action": "leave"}
 		]
 	}
 }
@@ -51,7 +51,15 @@ func show_dialogue(id: String):
 
 func handle_action(action):
 	match action:
-		"shop":
-			pass
-		"back":
-			pass
+		"sell":
+			sell_menu()
+		"leave":
+			queue_free()
+
+func sell_menu():
+	var sell_scene = preload("res://scenes/merchant_sell.tscn")
+	var sell = sell_scene.instantiate()
+	get_tree().current_scene.add_child(sell)
+	sell.sell_items()
+	queue_free()
+	

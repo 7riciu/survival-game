@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://3cxym1upi4mp"]
+
+[ext_resource type="Script" uid="uid://b2yiysarit2ox" path="res://scripts/merchant_sell_item.gd" id="1_e3xt7"]
+
+[node name="MerchantSellItem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_e3xt7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 126.0
+offset_bottom = 41.0
+
+[node name="Name" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.437
+anchor_top = 0.098000005
+anchor_right = 0.9760001
+anchor_bottom = 0.65900004
+offset_left = -0.062000275
+offset_top = -0.018000126
+offset_right = 0.023994446
+offset_bottom = -0.019001007
+
+[node name="Price" type="Label" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46
+anchor_top = 0.41500002
+anchor_right = 0.96800005
+anchor_bottom = 0.9760001
+offset_left = 0.0399971
+offset_top = -0.015001297
+offset_right = 0.03199005
+offset_bottom = -0.016002655
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.040000003
+anchor_top = 0.098000005
+anchor_right = 0.35700002
+anchor_bottom = 0.90200007
+offset_left = -0.04000044
+offset_top = -0.018000126
+offset_right = 0.017997742
+offset_bottom = 0.017997742

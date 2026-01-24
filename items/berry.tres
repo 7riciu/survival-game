@@ -8,4 +8,5 @@ script = ExtResource("2_tv1d7")
 id = "berry"
 display_name = "berry"
 icon = ExtResource("1_0hv32")
+sell_price = 3
 edible = true

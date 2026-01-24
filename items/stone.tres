@@ -8,3 +8,4 @@ script = ExtResource("2_uj5p3")
 id = "stone"
 display_name = "stone"
 icon = ExtResource("1_mwerj")
+sell_price = 2

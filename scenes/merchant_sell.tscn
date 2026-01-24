@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://d14e64y2irogd"]
+
+[ext_resource type="Script" uid="uid://no75asdkjleq" path="res://scripts/merchant_sell.gd" id="1_ird6p"]
+
+[node name="MerchantSell" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ird6p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31800002
+anchor_top = 0.16900001
+anchor_right = 0.62
+anchor_bottom = 0.707
+offset_left = 0.4399414
+offset_top = 0.47998047
+offset_right = -0.4000244
+offset_bottom = 0.44000244
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0070001
+anchor_bottom = 1.0
+offset_right = -0.05303955
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/ScrollContainer"]
+layout_mode = 2

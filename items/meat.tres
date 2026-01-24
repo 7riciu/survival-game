@@ -8,4 +8,5 @@ script = ExtResource("2_1j14l")
 id = "meat"
 display_name = "meat"
 icon = ExtResource("1_yb1o0")
+sell_price = 5
 cookable = true

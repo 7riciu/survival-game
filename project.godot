@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 inventory_data="*res://items/inventory_data.gd"
 recipes="*res://scripts/crafting_recipes.gd"
-dialogues="*res://scripts/dialogues.gd"
 
 [display]
 

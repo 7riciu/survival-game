@@ -68,7 +68,7 @@ func craft_campfire():
 		var campfire_scene = load("res://scenes/campfire.tscn")
 		var spawn_pos = Vector2(400, 200)
 		placer.start_placing(campfire_scene, spawn_pos)
-		
+
 func craft_dragonfly_spade():
 	var item = preload("res://items/axe.tres")
 	if dragonfly_amount >= 100 and wood_amount >= 10:

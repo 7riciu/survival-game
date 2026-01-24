@@ -8,3 +8,4 @@ script = ExtResource("2_8qelp")
 id = "dragonfly"
 display_name = "dragonfly"
 icon = ExtResource("1_8pgos")
+sell_price = 10
