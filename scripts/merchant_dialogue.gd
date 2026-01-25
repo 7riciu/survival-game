@@ -57,7 +57,7 @@ func handle_action(action):
 			queue_free()
 
 func sell_menu():
-	var sell_scene = preload("res://scenes/merchant_sell.tscn")
+	var sell_scene = preload("res://scenes/merchant_sell_menu.tscn")
 	var sell = sell_scene.instantiate()
 	get_tree().current_scene.get_node("UI").add_child(sell)
 	sell.sell_items()

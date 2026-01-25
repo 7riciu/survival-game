@@ -8,3 +8,7 @@ func sell_items():
 		var item = sell_item_scene.instantiate()
 		item.setup(item_id)
 		grid.add_child(item)
+
+func sell_clear():
+	for child in grid.get_children():
+		child.queue_free()

@@ -1,18 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d14e64y2irogd"]
+[gd_scene load_steps=4 format=3 uid="uid://d14e64y2irogd"]
 
-[ext_resource type="Script" uid="uid://no75asdkjleq" path="res://scripts/merchant_sell.gd" id="1_ird6p"]
+[ext_resource type="Script" uid="uid://no75asdkjleq" path="res://scripts/merchant_sell_menu.gd" id="1_3tm6b"]
+[ext_resource type="Script" uid="uid://c0548mtjnblj3" path="res://scripts/sell_X_button.gd" id="2_dqgj7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ird6p"]
 bg_color = Color(0.43567607, 0.5780038, 0.28370684, 1)
 
-[node name="MerchantSell" type="Control"]
+[node name="MerchantSellMenu" type="Control" groups=["merchant_sell_menu"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ird6p")
+script = ExtResource("1_3tm6b")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -29,14 +30,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ird6p")
 
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X
+"
+script = ExtResource("2_dqgj7")
+
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 34.0
 offset_right = -1.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
