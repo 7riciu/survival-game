@@ -4,7 +4,6 @@ extends Button
 var coin_item = preload("res://items/coin.tres")
 
 func _on_pressed() -> void:
-	var merchant_sell_menu = merchant_sell_menu_scene.instantiate()
 	var item_name = $"../Name".text
 	var sold_item = load("res://items/" + str(item_name) + ".tres")
 	inventory_data.remove(sold_item, 1)
