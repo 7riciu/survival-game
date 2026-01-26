@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://3cxym1upi4mp"]
+[gd_scene load_steps=6 format=3 uid="uid://3cxym1upi4mp"]
 
 [ext_resource type="Script" uid="uid://b2yiysarit2ox" path="res://scripts/merchant_sell_item.gd" id="1_e3xt7"]
 [ext_resource type="Script" uid="uid://ds1en5gvj00cn" path="res://scripts/sell_button.gd" id="2_g5lxp"]
+[ext_resource type="Texture2D" uid="uid://dxhajmg4ms3sg" path="res://assets/menu_item.png" id="2_wesqj"]
+[ext_resource type="Texture2D" uid="uid://da86lfs60tona" path="res://assets/slot.png" id="3_7lhws"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0f56"]
+texture = ExtResource("2_wesqj")
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(400, 100)
@@ -12,63 +17,77 @@ offset_bottom = 100.0
 script = ExtResource("1_e3xt7")
 
 [node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(286, 113)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.065000005
+anchor_right = 0.71500003
+anchor_bottom = 1.065
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x0f56")
 
 [node name="Name" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.437
-anchor_right = 0.832
-anchor_bottom = 0.43
-offset_left = 0.04800415
-offset_right = 0.19998169
+anchor_left = 0.374
+anchor_top = 0.119
+anchor_right = 0.77000004
+anchor_bottom = 0.37600002
+offset_left = 0.035995483
+offset_top = 0.052999496
+offset_right = -0.09803772
+offset_bottom = 0.011997223
 
 [node name="Price" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.41700003
-anchor_top = 0.58000004
-anchor_right = 0.82000005
+anchor_left = 0.37100002
+anchor_top = 0.624
+anchor_right = 0.777
 anchor_bottom = 0.93100005
-offset_left = -0.03199768
-offset_right = -3.0517578e-05
-offset_bottom = 0.0010070801
+offset_left = -0.10600281
+offset_top = -0.012001038
+offset_right = 0.067977905
+offset_bottom = -0.039001465
 vertical_alignment = 2
 
 [node name="Amount" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.38200003
+anchor_left = 0.37100002
 anchor_top = 0.31
-anchor_right = 0.80500007
+anchor_right = 0.671
 anchor_bottom = 0.65000004
-offset_left = 0.19998169
-offset_right = -3.0517578e-05
+offset_left = -0.10600281
+offset_top = 0.47000122
+offset_right = 0.09399414
 
 [node name="TextureRect" type="TextureRect" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.021000002
-anchor_right = 0.323
-anchor_bottom = 0.966
-offset_left = -0.015999794
-offset_right = 0.7999878
-offset_bottom = -0.013999939
+anchor_left = 0.038000003
+anchor_top = 0.11100001
+anchor_right = 0.34600002
+anchor_bottom = 0.88900006
+offset_left = 0.13199902
+offset_top = -0.043001175
+offset_right = 0.04399872
+offset_bottom = 0.04299164
+texture = ExtResource("3_7lhws")
+stretch_mode = 2
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.84200007
-anchor_top = 0.030000001
-anchor_right = 0.99500006
-anchor_bottom = 0.98
-offset_left = 0.19998169
-offset_right = -3.0517578e-05
+anchor_left = 0.78700006
+anchor_top = 0.119
+anchor_right = 0.97200006
+anchor_bottom = 0.87200004
+offset_left = -0.08201599
+offset_top = 0.052999496
+offset_right = 0.0079956055
+offset_bottom = -0.036003113
 text = "Sell
 "
 script = ExtResource("2_g5lxp")

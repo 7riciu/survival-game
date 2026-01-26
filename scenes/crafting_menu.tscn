@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqsd06vdicy1a"]
+[gd_scene load_steps=3 format=3 uid="uid://dqsd06vdicy1a"]
 
 [ext_resource type="Script" uid="uid://defs44pw3ahmv" path="res://scripts/crafting_menu.gd" id="1_uiuyx"]
+[ext_resource type="Texture2D" uid="uid://vffj4wntrnc" path="res://assets/menu_background.png" id="2_8qu5l"]
 
 [node name="Crafting" type="Control"]
 layout_mode = 3
@@ -12,20 +13,28 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_uiuyx")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 89.0
-offset_top = 162.0
-offset_right = 528.0
-offset_bottom = 841.0
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(309, 479)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072000004
+anchor_top = 0.18900001
+anchor_right = 0.23300001
+anchor_bottom = 0.632
+offset_left = -0.2400055
+offset_top = -0.120010376
+offset_right = -0.36001587
+offset_bottom = 0.4399414
+texture = ExtResource("2_8qu5l")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
-layout_mode = 0
-offset_left = -1.0
-offset_right = 440.0
-offset_bottom = 680.0
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(309, 479)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="ColorRect/ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="TextureRect/ScrollContainer"]
 layout_mode = 2

@@ -8,4 +8,5 @@ script = ExtResource("2_gdb6q")
 id = "spade"
 display_name = "spade"
 icon = ExtResource("1_l8gbg")
+sell_price = 5000
 holdable = true

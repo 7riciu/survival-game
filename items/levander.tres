@@ -8,3 +8,4 @@ script = ExtResource("2_sgp5l")
 id = "levander"
 display_name = "levander"
 icon = ExtResource("1_20m61")
+sell_price = 5

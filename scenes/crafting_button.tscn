@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0u27jjfpiqce"]
 
+[ext_resource type="Texture2D" uid="uid://b1p5patfa6mmo" path="res://assets/crafting_button.png" id="1_dk6r0"]
 [ext_resource type="Script" uid="uid://bg6h0e36d0rvf" path="res://scripts/crafting_button.gd" id="1_p2eb4"]
-[ext_resource type="Texture2D" uid="uid://da86lfs60tona" path="res://assets/slot.png" id="1_pff4a"]
 
 [node name="Crafting_button" type="Control"]
 layout_mode = 3
@@ -12,10 +12,20 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("1_pff4a")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_right = 1.1980001
+anchor_bottom = 1.187
+offset_left = 0.02399993
+offset_top = 3.0
+offset_right = -0.008010864
+offset_bottom = 0.04799652
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_dk6r0")
+flat = true
+icon_alignment = 1
 script = ExtResource("1_p2eb4")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

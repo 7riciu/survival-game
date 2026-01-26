@@ -1,6 +1,6 @@
 extends Control
 
-@onready var grid = $ColorRect/ScrollContainer/GridContainer
+@onready var grid = $TextureRect/ScrollContainer/GridContainer
 var crafting_item_scene = preload("res://scenes/crafting_item.tscn")
 var item
 

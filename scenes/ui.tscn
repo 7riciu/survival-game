@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=12 format=3 uid="uid://ddckudl6jhlc2"]
 
+[ext_resource type="Texture2D" uid="uid://b5xrjjns80yog" path="res://assets/menu_main.png" id="1_vdcm2"]
 [ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="10_7dvkv"]
 [ext_resource type="Texture2D" uid="uid://ld4b1xhx5eij" path="res://assets/timer.png" id="11_qsv74"]
 [ext_resource type="Texture2D" uid="uid://23i7cskrgvnl" path="res://assets/bar background.png" id="12_8k7j3"]
@@ -13,6 +14,17 @@
 
 [node name="UI" type="CanvasLayer"]
 
+[node name="TextureButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.012
+anchor_right = 0.042000003
+anchor_bottom = 0.075
+offset_left = -0.44000053
+offset_top = 0.03999996
+offset_right = 0.35999298
+texture_normal = ExtResource("1_vdcm2")
+
 [node name="Inventory" parent="." instance=ExtResource("10_7dvkv")]
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,17 +37,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="timer_ui" type="TextureRect" parent="."]
-offset_left = 1621.0
-offset_top = 21.0
-offset_right = 1893.0
-offset_bottom = 289.0
+anchors_preset = -1
+anchor_left = 0.84400004
+anchor_top = 0.019000001
+anchor_right = 0.98600006
+anchor_bottom = 0.268
+offset_left = 0.51989746
+offset_top = 0.47999954
+offset_right = -0.12011719
+offset_bottom = -0.44000244
 texture = ExtResource("11_qsv74")
 
 [node name="health_bar" type="TextureProgressBar" parent="." groups=["health_bar"]]
-offset_left = 1480.0
-offset_top = 101.0
-offset_right = 1573.0
-offset_bottom = 208.0
+anchors_preset = -1
+anchor_left = 0.771
+anchor_top = 0.094000004
+anchor_right = 0.81900007
+anchor_bottom = 0.178
+offset_left = -0.32006836
+offset_top = -0.5200043
+offset_right = 0.51989746
+offset_bottom = -0.2400055
 step = 2.0
 value = 100.0
 fill_mode = 3
@@ -45,17 +67,25 @@ tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
 tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
 
 [node name="health_ui" type="TextureRect" parent="."]
-offset_left = 1455.0
-offset_top = 81.0
-offset_right = 1600.0
-offset_bottom = 217.0
+anchors_preset = -1
+anchor_left = 0.758
+anchor_top = 0.075
+anchor_right = 0.83300006
+anchor_bottom = 0.201
+offset_left = -0.35998535
+offset_right = 0.6398926
+offset_bottom = -0.08000183
 texture = ExtResource("12_h1mc3")
 
 [node name="hunger_bar" type="TextureProgressBar" parent="." groups=["hunger_bar"]]
-offset_left = 1538.0
-offset_top = 268.0
-offset_right = 1632.0
-offset_bottom = 369.0
+anchors_preset = -1
+anchor_left = 0.80100006
+anchor_top = 0.24800001
+anchor_right = 0.85
+anchor_bottom = 0.342
+offset_left = 0.079833984
+offset_top = 0.15997314
+offset_bottom = -0.36001587
 step = 2.0
 value = 100.0
 fill_mode = 3
@@ -65,17 +95,27 @@ tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
 tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
 
 [node name="hunger_ui" type="TextureRect" parent="."]
-offset_left = 1511.0
-offset_top = 247.0
-offset_right = 1656.0
-offset_bottom = 383.0
+anchors_preset = -1
+anchor_left = 0.78700006
+anchor_top = 0.22900002
+anchor_right = 0.86200005
+anchor_bottom = 0.35500002
+offset_left = -0.040161133
+offset_top = -0.32002258
+offset_right = 0.95996094
+offset_bottom = -0.4000244
 texture = ExtResource("13_cof4p")
 
 [node name="thirst_bar" type="TextureProgressBar" parent="." groups=["thirst_bar"]]
-offset_left = 1713.0
-offset_top = 329.0
-offset_right = 1804.0
-offset_bottom = 426.0
+anchors_preset = -1
+anchor_left = 0.892
+anchor_top = 0.305
+anchor_right = 0.94000006
+anchor_bottom = 0.39400002
+offset_left = 0.35998535
+offset_top = -0.3999939
+offset_right = -0.8000488
+offset_bottom = 0.47998047
 step = 2.0
 value = 100.0
 fill_mode = 3
@@ -85,14 +125,23 @@ tint_under = Color(0.29536527, 0.1760655, 0.04511778, 1)
 tint_over = Color(0.74020654, 0.4702173, 0.3144925, 1)
 
 [node name="thirst_ui" type="TextureRect" parent="."]
-offset_left = 1687.0
-offset_top = 308.0
-offset_right = 1832.0
-offset_bottom = 444.0
+anchors_preset = -1
+anchor_left = 0.87900007
+anchor_top = 0.28500003
+anchor_right = 0.95400006
+anchor_bottom = 0.411
+offset_left = -0.6801758
+offset_top = 0.19998169
+offset_right = 0.3199463
+offset_bottom = 0.11999512
 texture = ExtResource("14_f7tlh")
 
 [node name="Crafting" parent="." instance=ExtResource("19_jkdwc")]
-offset_left = 32.0
-offset_top = 199.0
-offset_right = 32.0
-offset_bottom = 199.0
+anchor_left = -0.008
+anchor_top = 0.17500001
+anchor_right = 0.064
+anchor_bottom = 0.30100003
+offset_left = 0.3600006
+offset_top = -1.5258789e-05
+offset_right = 0.11999512
+offset_bottom = -0.08001709
