@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bvvh0daa8w64q" path="res://scripts/dragonfly.gd" id="1_br0up"]
 [ext_resource type="Resource" uid="uid://7knpp0mugtrx" path="res://items/dragonfly.tres" id="2_gvtvj"]
-[ext_resource type="Texture2D" uid="uid://bqnee2um3t6oo" path="res://assets/dragonfly.png" id="3_gvtvj"]
+[ext_resource type="Texture2D" uid="uid://dvegnd1tq8mt7" path="res://assets/dragonfly.png" id="3_gvtvj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gvtvj"]
 atlas = ExtResource("3_gvtvj")
-region = Rect2(0, 0, 74, 69)
+region = Rect2(0, 0, 73, 68)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e5x16"]
 animations = [{

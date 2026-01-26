@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://depikt0b02qx"]
 
 [ext_resource type="Script" uid="uid://b8cpukkv4611e" path="res://scripts/lake.gd" id="1_fkw7t"]
-[ext_resource type="Texture2D" uid="uid://vru8l24wl25t" path="res://assets/lake.png" id="2_fkw7t"]
+[ext_resource type="Texture2D" uid="uid://by5ftqi8g2avc" path="res://assets/lake.png" id="2_fkw7t"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4p5pm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkw7t"]
 atlas = ExtResource("2_fkw7t")
-region = Rect2(0, 0, 637, 341)
+region = Rect2(0, 0, 639, 342)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m1x1k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4p5pm")
+"texture": SubResource("AtlasTexture_fkw7t")
 }],
 "loop": true,
 "name": &"default",

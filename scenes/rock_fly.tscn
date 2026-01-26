@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://7q3i13fa5v31"]
 
 [ext_resource type="Script" uid="uid://c83iqgyc5h4wy" path="res://scripts/rock_fly.gd" id="1_l5plu"]
-[ext_resource type="Texture2D" uid="uid://ctms7xu2yfxgb" path="res://assets/rock_fly.png" id="2_l5plu"]
+[ext_resource type="Texture2D" uid="uid://d1yotsmttfxep" path="res://assets/rock_fly.png" id="2_l5plu"]
 [ext_resource type="Script" uid="uid://bt7rcfiph6uw5" path="res://scripts/rock_fly_area.gd" id="3_l5plu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8mmtf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5plu"]
 atlas = ExtResource("2_l5plu")
 region = Rect2(0, 0, 471, 330)
 
@@ -12,7 +12,7 @@ region = Rect2(0, 0, 471, 330)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8mmtf")
+"texture": SubResource("AtlasTexture_l5plu")
 }],
 "loop": true,
 "name": &"default",

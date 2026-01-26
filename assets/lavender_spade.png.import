@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0k245squs46"
-path="res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"
+uid="uid://di80lid2upom3"
+path="res://.godot/imported/lavender_spade.png-c2eb9347f22e5a8db7f7e109c59b67eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass_patch_light.png"
-dest_files=["res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"]
+source_file="res://assets/lavender_spade.png"
+dest_files=["res://.godot/imported/lavender_spade.png-c2eb9347f22e5a8db7f7e109c59b67eb.ctex"]
 
 [params]
 

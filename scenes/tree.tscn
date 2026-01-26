@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://b14q6xat7qq7e" path="res://scripts/tree.gd" id="1_viusy"]
 [ext_resource type="Script" uid="uid://bc2adrf0n3fs0" path="res://scripts/tree_area.gd" id="1_vplca"]
-[ext_resource type="Texture2D" uid="uid://l45r7tdvgdv6" path="res://assets/tree.png" id="2_viusy"]
+[ext_resource type="Texture2D" uid="uid://u3j8t6iy5d1n" path="res://assets/tree.png" id="2_viusy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qd6xs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_viusy"]
 atlas = ExtResource("2_viusy")
-region = Rect2(0, 0, 555, 737)
+region = Rect2(0, 0, 556, 734)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ake3r"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qd6xs")
+"texture": SubResource("AtlasTexture_viusy")
 }],
 "loop": true,
 "name": &"default",

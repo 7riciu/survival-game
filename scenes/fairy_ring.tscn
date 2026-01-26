@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://nipljqkcopit"]
 
 [ext_resource type="Script" uid="uid://cdy6afmsevupm" path="res://scripts/fairy_ring.gd" id="1_uliyj"]
-[ext_resource type="Texture2D" uid="uid://b0aqv0puxiet7" path="res://assets/fairy_ring.png" id="2_vpxoe"]
+[ext_resource type="Texture2D" uid="uid://bdmyt8iofc5pp" path="res://assets/fairy_ring.png" id="2_vpxoe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dhn6y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpxoe"]
 atlas = ExtResource("2_vpxoe")
 region = Rect2(0, 0, 723, 464)
 
@@ -11,7 +11,7 @@ region = Rect2(0, 0, 723, 464)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dhn6y")
+"texture": SubResource("AtlasTexture_vpxoe")
 }],
 "loop": true,
 "name": &"default",

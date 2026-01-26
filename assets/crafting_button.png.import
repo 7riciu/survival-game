@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0k245squs46"
-path="res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"
+uid="uid://b1p5patfa6mmo"
+path="res://.godot/imported/crafting_button.png-30934dfcebecd67a8cf551320a627e94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass_patch_light.png"
-dest_files=["res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"]
+source_file="res://assets/crafting_button.png"
+dest_files=["res://.godot/imported/crafting_button.png-30934dfcebecd67a8cf551320a627e94.ctex"]
 
 [params]
 

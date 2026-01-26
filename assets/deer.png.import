@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl0k245squs46"
-path="res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"
+uid="uid://dnqqgpjvc5k7a"
+path="res://.godot/imported/deer.png-264ba7e8c4c3aafa26cc3bf4c97fe558.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grass_patch_light.png"
-dest_files=["res://.godot/imported/grass_patch_light.png-02c3e7b2ef4db9ea9bb2eccafd3793fe.ctex"]
+source_file="res://assets/deer.png"
+dest_files=["res://.godot/imported/deer.png-264ba7e8c4c3aafa26cc3bf4c97fe558.ctex"]
 
 [params]
 
