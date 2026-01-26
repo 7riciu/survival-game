@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://hn0kb5o8dwfy"]
+
+[ext_resource type="Texture2D" uid="uid://dbogmjqfrbsv2" path="res://assets/cotton_flower.png" id="1_kunla"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_2le7j"]
+
+[resource]
+script = ExtResource("2_2le7j")
+id = "cotton"
+display_name = "cotton"
+icon = ExtResource("1_kunla")

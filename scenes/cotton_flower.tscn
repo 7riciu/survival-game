@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://cknmeiehf5pe6"]
+
+[ext_resource type="Script" uid="uid://p6u8gosbylm" path="res://scripts/cotton_flower.gd" id="1_k2kj3"]
+[ext_resource type="Texture2D" uid="uid://dbogmjqfrbsv2" path="res://assets/cotton_flower.png" id="2_ao55a"]
+[ext_resource type="Script" uid="uid://dgdqhxe2xw8gl" path="res://scripts/cotton_flower_area.gd" id="3_ao55a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pmb4"]
+atlas = ExtResource("2_ao55a")
+region = Rect2(0, 0, 53, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c0yv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pmb4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5gi8"]
+size = Vector2(49, 25.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iqrhs"]
+radius = 63.0
+height = 160.0
+
+[node name="LevanderFlower" type="CharacterBody2D"]
+script = ExtResource("1_k2kj3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c0yv0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 22.75)
+shape = SubResource("RectangleShape2D_b5gi8")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_ao55a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_iqrhs")
