@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://clw3bqikpjwgl"]
+
+[ext_resource type="Script" uid="uid://wajn18o1muop" path="res://scripts/deer.gd" id="1_u3xnd"]
+[ext_resource type="Texture2D" uid="uid://dnqqgpjvc5k7a" path="res://assets/deer.png" id="2_7c7n6"]
+[ext_resource type="Script" uid="uid://btvb6c0rsuq7x" path="res://scripts/deer_area.gd" id="3_7c7n6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euvas"]
+atlas = ExtResource("2_7c7n6")
+region = Rect2(0, 0, 347, 339)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4fgh5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euvas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wt38s"]
+radius = 78.0
+height = 232.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mmb0"]
+radius = 292.6175
+
+[node name="Deer" type="CharacterBody2D"]
+script = ExtResource("1_u3xnd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4fgh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27, 50)
+shape = SubResource("CapsuleShape2D_wt38s")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_7c7n6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(21, -1)
+shape = SubResource("CircleShape2D_8mmb0")

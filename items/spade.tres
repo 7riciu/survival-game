@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dibfs01mmxphk"]
+
+[ext_resource type="Texture2D" uid="uid://di80lid2upom3" path="res://assets/lavender_spade.png" id="1_l8gbg"]
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="2_gdb6q"]
+
+[resource]
+script = ExtResource("2_gdb6q")
+id = "spade"
+display_name = "spade"
+icon = ExtResource("1_l8gbg")
+holdable = true

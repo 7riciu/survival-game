@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=18 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://depikt0b02qx" path="res://scenes/lake.tscn" id="2_lbhrr"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c1ww8pi02sxi5" path="res://scenes/merchant.tscn" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://d15o2vyu462ih" path="res://scenes/levander_flower.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cknmeiehf5pe6" path="res://scenes/cotton_flower.tscn" id="14_trtic"]
+[ext_resource type="PackedScene" uid="uid://clw3bqikpjwgl" path="res://scenes/deer.tscn" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/wolf.tscn" id="15_ir15t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
@@ -325,10 +326,13 @@ position = Vector2(1006, 1069)
 position = Vector2(-38, -294)
 
 [node name="Merchant" parent="." instance=ExtResource("12_dinhu")]
-position = Vector2(388, 255)
+position = Vector2(-651, -143)
 
 [node name="LevanderFlower" parent="." instance=ExtResource("13_kvuet")]
 position = Vector2(449, 1516)
 
 [node name="LevanderFlower2" parent="." instance=ExtResource("14_trtic")]
 position = Vector2(856, 1613)
+
+[node name="Deer" parent="." instance=ExtResource("15_ca42v")]
+position = Vector2(390, 190)
