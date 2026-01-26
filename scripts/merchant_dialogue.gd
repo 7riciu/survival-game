@@ -2,30 +2,16 @@ extends Node
 
 const dialogue = {
 	"start": {
-		"text": "Hello! I'm the magical deer.",
+		"text": "Hello! I'm the merchant.",
 		"choices": [
-			{ "text": "About", "next": "about1" },
+			{ "text": "Next", "next": "options" },
 			{ "text": "Leave", "action": "leave" }
 		]
 	},
-	"about1": {
-		"text": "I look for beautiful items",
+	"options": {
+		"text": "How can I help you?",
 		"choices": [
-			{ "text": "Help", "next": "requirements"},
-			{ "text": "More", "next": "about2"},
-			{ "text": "Leave", "action": "leave"}
-		]
-	},
-	"about2": {
-		"text": "This is the most beautiful place",
-		"choices": [
-			{ "text": "Leave", "action": "leave"}
-		]
-	},
-	"requirements": {
-		"text": "I want 100 dragonflies, 15 lavender and 15 cotton for myslef. I will give you a beautiful reward!",
-		"choices": [
-			{ "text": "Trade", "action": "trade"},
+			{ "text": "Sell", "action": "sell"},
 			{ "text": "Leave", "action": "leave"}
 		]
 	}
@@ -63,24 +49,15 @@ func show_dialogue(id: String):
 
 func handle_action(action):
 	match action:
-		"trade":
-			trade()
+		"sell":
+			sell_menu()
 		"leave":
 			queue_free()
 
-func trade():
-	var dragonfly_item = preload("res://items/dragonfly.tres")
-	var lavender_item = preload("res://items/levander.tres")
-	var cotton_item = preload("res://items/cotton.tres")
-	var spade = preload("res://items/spade.tres")
+func sell_menu():
+	var sell_scene = preload("res://scenes/merchant_sell_menu.tscn")
+	var sell = sell_scene.instantiate()
+	get_tree().current_scene.get_node("UI").add_child(sell)
+	sell.sell_items()
+	queue_free()
 	
-	var dragonfly_amount = inventory_data.items.get(dragonfly_item, 0)
-	var lavender_amount = inventory_data.items.get(lavender_item, 0)
-	var cotton_amount = inventory_data.items.get(cotton_item, 0)
-	
-	if dragonfly_amount >= 1 and lavender_amount >= 1 and cotton_amount >= 1:
-		inventory_data.remove(dragonfly_item, 1)
-		inventory_data.remove(lavender_item, 1)
-		inventory_data.remove(cotton_item, 1)
-		inventory_data.add(spade, 1)
-		queue_free()

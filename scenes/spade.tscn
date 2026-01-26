@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://mcss0wkkwlty"]
+
+[ext_resource type="Texture2D" uid="uid://di80lid2upom3" path="res://assets/lavender_spade.png" id="1_1jlfn"]
+
+[node name="Spade" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(44, 117)
+texture = ExtResource("1_1jlfn")

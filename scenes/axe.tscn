@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://crugdpxv86li0"]
 
-[ext_resource type="Texture2D" uid="uid://5ell67qpajvl" path="res://assets/axe.png" id="1_odgf8"]
+[ext_resource type="Texture2D" uid="uid://b44qbmqylijp4" path="res://assets/axe.png" id="1_odgf8"]
 
 [node name="pickaxe" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(36, 49)
+position = Vector2(33, 65)
 texture = ExtResource("1_odgf8")
