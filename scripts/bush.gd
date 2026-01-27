@@ -8,7 +8,7 @@ var berry_on_bush = 5
 var has_berry = true
 
 func _process(_delta: float) -> void:
-	if bush_area.can_collect_berry and berry_on_bush > 0 and Input.is_action_just_pressed("e"):
+	if bush_area.can_collect_berry and berry_on_bush > 0 and Input.is_action_just_pressed("click"):
 		berry_on_bush -= 1
 		var berry = berry_scene.instantiate()
 		berry.global_position = self.global_position + Vector2(0, 100)

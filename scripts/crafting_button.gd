@@ -6,6 +6,7 @@ var crafting_menu_instance = null
 
 func _ready() -> void:
 	crafting_menu_instance = crafting_menu_scene.instantiate()
+	crafting_menu_instance.position = Vector2(150, 40)
 	add_child(crafting_menu_instance)
 	crafting_menu_instance.visible = false
 

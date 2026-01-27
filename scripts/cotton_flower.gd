@@ -9,7 +9,7 @@ var cotton_stock = 1
 var has_cotton = true
 
 func _process(_delta: float) -> void:
-	if cotton_flower_area.can_collect_cotton and cotton_stock > 0 and Input.is_action_just_pressed("e"):
+	if cotton_flower_area.can_collect_cotton and cotton_stock > 0 and Input.is_action_just_pressed("click"):
 		cotton_stock -= 1
 		inventory_data.add(cotton, 1)
 	elif cotton_stock <= 0:

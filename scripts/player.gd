@@ -10,7 +10,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 
 var health = 100
-var speed = 400.0
+var speed = 500.0
 var hunger = 100
 var thirst = 100
 

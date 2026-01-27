@@ -21,7 +21,7 @@ func on_body_exited(body):
 
 func _process(_delta: float) -> void:
 	if can_bless and Input.is_action_just_pressed("e"):
-		inventory_data.remove(dragonfly_item, 1)
+		inventory_data.remove(dragonfly_item, 10)
 		player.health = 100
 		health_bar.value = 100
 		player.hunger = 100

@@ -8,7 +8,7 @@ var dragonfly_stock = 3
 var has_dragonfly = true
 
 func _process(_delta: float) -> void:
-	if rock_fly_area.can_collect_dragonfly and dragonfly_stock > 0 and Input.is_action_just_pressed("e"):
+	if rock_fly_area.can_collect_dragonfly and dragonfly_stock > 0 and Input.is_action_just_pressed("click"):
 		dragonfly_stock -= 1
 		var dragonfly = dragonfly_scene.instantiate()
 		dragonfly.global_position = self.global_position + Vector2(0, 200)

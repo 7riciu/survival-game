@@ -9,7 +9,7 @@ var lev_stock = 1
 var has_lev = true
 
 func _process(_delta: float) -> void:
-	if lev_flower_area.can_collect_lev and lev_stock > 0 and Input.is_action_just_pressed("e"):
+	if lev_flower_area.can_collect_lev and lev_stock > 0 and Input.is_action_just_pressed("click"):
 		lev_stock -= 1
 		inventory_data.add(levander, 1)
 	elif lev_stock <= 0:
