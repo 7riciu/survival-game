@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://4h5scgl78oog"]
+
+[ext_resource type="Texture2D" uid="uid://bl0k245squs46" path="res://assets/grass_patch_light.png" id="1_iq42p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1g54"]
+radius = 84.99606
+height = 549.99506
+
+[node name="GrassLight" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iq42p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5712875
+shape = SubResource("CapsuleShape2D_k1g54")
+disabled = true
