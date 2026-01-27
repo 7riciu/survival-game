@@ -1,12 +1,8 @@
 extends Button
 
+@onready var crafting_button = get_tree().get_first_node_in_group("crafting_button")
 @onready var crafting_menu_scene = preload("res://scenes/crafting_menu.tscn")
 var crafting_menu_instance = null
 
-func _ready() -> void:
-	crafting_menu_instance = crafting_menu_scene.instantiate()
-	add_child(crafting_menu_instance)
-	crafting_menu_instance.visible = false
-
 func _on_pressed() -> void:
-	crafting_menu_instance.visible = false
+	crafting_button.crafting_menu_instance.visible = false
