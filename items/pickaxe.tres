@@ -8,5 +8,6 @@ script = ExtResource("2_0tumq")
 id = "pickaxe"
 display_name = "pickaxe"
 icon = ExtResource("1_ixunl")
+power = 3
 sell_price = 20
 holdable = true

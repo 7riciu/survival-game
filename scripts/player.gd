@@ -14,9 +14,9 @@ var speed = 500.0
 var hunger = 100
 var thirst = 100
 
-var axe_power = 10
-var pickaxe_power = 2
-var sword_power = 10
+var axe_power = 1
+var pickaxe_power = 1
+var sword_power = 5
 
 func _ready() -> void:
 	print(get_tree().get_nodes_in_group("inventory"))

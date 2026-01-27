@@ -76,15 +76,26 @@ func select(itm):
 	
 	if held_item != null:
 		held_item.queue_free()
+		player.pickaxe_power = 1
+		player.axe_power = 1
+		player.sword_power = 5
 		held_item = null
 
 	if itm.is_holdable:
-		var holdable_item_name = itm.item_name.to_lower()
+		var holdable_item_name = itm.item_name
 		var scene: PackedScene = load("res://scenes/" + holdable_item_name + ".tscn")
 
 		if scene == null:
 			push_error("Scene not found for item: " + holdable_item_name)
 			return
+			
+		var item_resource = load("res://items/" + str(holdable_item_name) + ".tres")
+		if holdable_item_name == "sword" or holdable_item_name == "spade":
+			player.sword_power = item_resource.power
+		elif holdable_item_name == "pickaxe":
+			player.pickaxe_power = item_resource.power
+		elif holdable_item_name == "axe":
+			player.axe_power = item_resource.power
 
 		var instance = scene.instantiate()
 		player_hand.add_child(instance)

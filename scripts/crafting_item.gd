@@ -43,7 +43,6 @@ func craft_sword():
 		inventory_data.remove(stone_item, 10)
 		inventory_data.remove(wood_item, 10)
 		inventory_data.add(item, 1)
-		player.sword_power = 20
 		
 func craft_pickaxe():
 	var item = preload("res://items/pickaxe.tres")
@@ -51,7 +50,6 @@ func craft_pickaxe():
 		inventory_data.remove(stone_item, 10)
 		inventory_data.remove(wood_item, 10)
 		inventory_data.add(item, 1)
-		player.pickaxe_power = 20
 		
 func craft_axe():
 	var item = preload("res://items/axe.tres")
@@ -59,7 +57,6 @@ func craft_axe():
 		inventory_data.remove(stone_item, 10)
 		inventory_data.remove(wood_item, 10)
 		inventory_data.add(item, 1)
-		player.axe_power = 20
 
 func craft_campfire():
 	if wood_amount >= 10:

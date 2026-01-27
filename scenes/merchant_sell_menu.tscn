@@ -9,6 +9,7 @@
 texture = ExtResource("2_sp7sx")
 
 [node name="MerchantSellMenu" type="Control" groups=["merchant_sell_menu"]]
+custom_minimum_size = Vector2(309, 479)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
