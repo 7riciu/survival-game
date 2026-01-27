@@ -6,9 +6,9 @@
 [node name="Crafting_item" type="Button"]
 custom_minimum_size = Vector2(286, 113)
 anchors_preset = -1
-anchor_right = 0.149
+anchor_right = 0.15300001
 anchor_bottom = 0.105000004
-offset_right = -0.08001709
+offset_right = 0.23999023
 offset_bottom = -0.40000153
 icon = ExtResource("1_wkp4j")
 flat = true

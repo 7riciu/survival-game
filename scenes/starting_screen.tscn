@@ -7,6 +7,8 @@
 script = ExtResource("1_vdvo5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1936.1038
-offset_bottom = 1088.0
+offset_left = -83.0
+offset_top = -3725.0
+offset_right = 3883.0
+offset_bottom = 1218.0
 texture = ExtResource("2_lyhl5")
