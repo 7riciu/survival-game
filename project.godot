@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="survival"
-run/main_scene="uid://b4esk8eblrhvn"
+run/main_scene="uid://b1oaak67k1hy7"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
