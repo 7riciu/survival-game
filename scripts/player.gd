@@ -20,7 +20,7 @@ var sword_power = 5
 
 func _ready() -> void:
 	print(get_tree().get_nodes_in_group("inventory"))
-	thirst_decrease_by_time()
+	thirst_system()
 	hunger_decrese()
 
 func _physics_process(_delta: float) -> void:
@@ -46,16 +46,14 @@ func hunger_decrese():
 		hunger -= 2
 		hunger_bar.value = hunger
 
-func thirst_decrease_by_time():
+func thirst_system():
 	while  thirst > 0:
 		await get_tree().create_timer(2).timeout
-		thirst -= 2
-		thirst_bar.value = thirst
-		
 		if not lake.can_drink:
-			pass
+			thirst -= 2
+			thirst_bar.value = thirst
 		elif lake.can_drink and thirst < 100:
-			thirst += 12
+			thirst += 20
 			thirst_bar.value = thirst
 			if thirst >= 100:
 				thirst = 100
