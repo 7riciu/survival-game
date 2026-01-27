@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var wood_scene: PackedScene = preload("res://scenes/wood.tscn")
 @onready var tree_area = $Area2D
 
-var tree_health = 100
+var tree_health = 10
 
 func _process(_delta: float) -> void:
 	if tree_area.can_hit and tree_health > 0 and Input.is_action_just_pressed("click"):

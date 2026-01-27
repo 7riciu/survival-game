@@ -1,16 +1,6 @@
 extends Node
 
 const RECIPES = {
-	"sword": {
-		"icon": preload("res://assets/pickaxe.png"),
-		"description": "sword",
-		"action": "craft_sword",
-		"requires": {
-			"wood": 10,
-			"stone": 10
-		}
-	},
-	
 	"pickaxe": {
 		"icon": preload("res://assets/pickaxe.png"),
 		"description": "pickaxe",
@@ -32,21 +22,11 @@ const RECIPES = {
 	},
 	
 	"campfire": {
-		"icon": preload("res://assets/pickaxe.png"),
+		"icon": preload("res://assets/campfire_fire.png"),
 		"description": "campfire",
 		"action": "craft_campfire",
 		"requires": {
 			"wood": 10
 		}
-	},
-	
-	"dragonfly_spade": {
-		"icon": preload("res://assets/dragonfly.png"),
-		"description": "dragonfly spade",
-		"action": "craft_dragonfly_spade",
-		"requires": {
-			"dragonfly": 100,
-			"wood": 10
-		}
-	},
+	}
 }
