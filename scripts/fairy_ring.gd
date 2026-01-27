@@ -5,6 +5,7 @@ extends Area2D
 @onready var hunger_bar = get_tree().get_first_node_in_group("hunger_bar")
 @onready var thirst_bar = get_tree().get_first_node_in_group("thirst_bar")
 @onready var dragonfly_item = preload("res://items/dragonfly.tres")
+var dragonfly_amount
 var can_bless = false
 
 func _ready():
@@ -20,8 +21,9 @@ func on_body_exited(body):
 		can_bless = false
 
 func _process(_delta: float) -> void:
-	if can_bless and Input.is_action_just_pressed("e"):
-		inventory_data.remove(dragonfly_item, 10)
+	dragonfly_amount = inventory_data.items.get(dragonfly_item, 0)
+	if can_bless and dragonfly_amount >= 15 and Input.is_action_just_pressed("e"):
+		inventory_data.remove(dragonfly_item, 15)
 		player.health = 100
 		health_bar.value = 100
 		player.hunger = 100
