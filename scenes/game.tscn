@@ -793,7 +793,7 @@ position = Vector2(4259, 361)
 position = Vector2(1232, 962)
 
 [node name="lake" parent="." instance=ExtResource("2_lbhrr")]
-position = Vector2(4604, 1039)
+position = Vector2(4433, 1054)
 
 [node name="bush2" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(4065, 665)
@@ -1319,7 +1319,7 @@ texture = ExtResource("19_264po")
 position = Vector2(3693, 3164)
 texture = ExtResource("19_264po")
 
-[node name="Tree3" type="Sprite2D" parent="."]
+[node name="Tree3" type="Sprite2D" parent="." groups=["tree"]]
 position = Vector2(5057, 1837)
 texture = ExtResource("19_264po")
 
@@ -1343,12 +1343,9 @@ texture = ExtResource("19_264po")
 position = Vector2(4839, -3077)
 texture = ExtResource("19_264po")
 
-[node name="Tree9" type="Sprite2D" parent="."]
+[node name="Tree9" type="Sprite2D" parent="." groups=["tree"]]
 position = Vector2(5432, -330)
 texture = ExtResource("19_264po")
-
-[node name="lake3" parent="." instance=ExtResource("2_lbhrr")]
-position = Vector2(4565, 2642)
 
 [node name="lake4" parent="." instance=ExtResource("2_lbhrr")]
 position = Vector2(3078, 156)
@@ -1358,3 +1355,6 @@ position = Vector2(-51, 3209)
 
 [node name="lake6" parent="." instance=ExtResource("2_lbhrr")]
 position = Vector2(4389, -2342)
+
+[node name="lake3" parent="." instance=ExtResource("2_lbhrr")]
+position = Vector2(4729, 2736)

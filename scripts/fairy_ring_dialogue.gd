@@ -16,7 +16,7 @@ const dialogue = {
 		]
 	},
 	"requirements": {
-		"text": "I want 15 dragonflies for a blessing",
+		"text": "I want 1 dragonfly for a blessing",
 		"choices": [
 			{ "text": "Trade", "action": "trade"},
 			{ "text": "Leave", "action": "leave"}
@@ -69,8 +69,8 @@ func trade():
 	var dragonfly_item = preload("res://items/dragonfly.tres")
 	var dragonfly_amount = inventory_data.items.get(dragonfly_item, 0)
 	
-	if dragonfly_amount >= 15:
-		inventory_data.remove(dragonfly_item, 15)
+	if dragonfly_amount >= 1:
+		inventory_data.remove(dragonfly_item, 1)
 		player.health = 100
 		health_bar.value = 100
 		player.hunger = 100

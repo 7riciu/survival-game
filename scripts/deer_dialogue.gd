@@ -17,13 +17,13 @@ const dialogue = {
 		]
 	},
 	"about2": {
-		"text": "This is the most beautiful place",
+		"text": "Dragonflies lay around rocks. You can gather flowers. There is a fairy ring arounf here that heals you.",
 		"choices": [
 			{ "text": "Leave", "action": "leave"}
 		]
 	},
 	"requirements": {
-		"text": "I want 100 dragonflies, 15 lavender and 15 cotton for myslef. I will give you a beautiful reward!",
+		"text": "I want 1 dragonfly, 1 lavender and 1 cotton flower. I will give you a cute reward!",
 		"choices": [
 			{ "text": "Trade", "action": "trade"},
 			{ "text": "Leave", "action": "leave"}

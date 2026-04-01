@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
-@onready var tree = get_tree().get_nodes_in_group("tree")
 @onready var berry_ui = get_tree().get_first_node_in_group("berry_ui")
-@onready var lake = get_tree().get_first_node_in_group("lake_area")
 @onready var health_bar = get_tree().get_first_node_in_group("health_bar")
 @onready var hunger_bar = get_tree().get_first_node_in_group("hunger_bar")
 @onready var thirst_bar = get_tree().get_first_node_in_group("thirst_bar")
 
 @onready var anim = $AnimatedSprite2D
 
+@onready var can_drink = false
 var health = 100
 var speed = 500.0
 var hunger = 100
@@ -47,12 +46,13 @@ func hunger_decrese():
 		hunger_bar.value = hunger
 
 func thirst_system():
-	while  thirst > 0:
-		await get_tree().create_timer(2).timeout
-		if not lake.can_drink:
+	while  thirst > 1:
+		if not can_drink:
+			await get_tree().create_timer(2).timeout
 			thirst -= 2
 			thirst_bar.value = thirst
-		elif lake.can_drink and thirst < 100:
+		elif can_drink:
+			await get_tree().create_timer(2).timeout
 			thirst += 20
 			thirst_bar.value = thirst
 			if thirst >= 100:
