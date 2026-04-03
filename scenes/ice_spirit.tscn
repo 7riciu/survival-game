@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blyetrssc3457"]
+
+[ext_resource type="Texture2D" uid="uid://duxxcuqscmjx1" path="res://assets/ice_spirit.png" id="1_phrn8"]
+
+[node name="ice_spirit" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_phrn8")
