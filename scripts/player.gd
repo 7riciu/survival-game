@@ -7,6 +7,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 
+@onready var can_move = true
 @onready var can_drink = false
 var health = 100
 var speed = 500.0
@@ -23,21 +24,22 @@ func _ready() -> void:
 	hunger_decrese()
 
 func _physics_process(_delta: float) -> void:
-	var direction = Vector2(
-		Input.get_axis("left", "right"),
-		Input.get_axis("up", "down")
-	)
+	if can_move:
+		var direction = Vector2(
+			Input.get_axis("left", "right"),
+			Input.get_axis("up", "down")
+		)
 
-	if direction != Vector2.ZERO:
-		direction = direction.normalized()
+		if direction != Vector2.ZERO:
+			direction = direction.normalized()
 
-	velocity = direction * speed
-	move_and_slide()
-	
-	var mouse_pos = get_global_mouse_position()
-	var dir = mouse_pos - global_position
-	
-	self.rotation = dir.angle() + deg_to_rad(-90)
+		velocity = direction * speed
+		move_and_slide()
+		
+		var mouse_pos = get_global_mouse_position()
+		var dir = mouse_pos - global_position
+		
+		self.rotation = dir.angle() + deg_to_rad(-90)
 
 func hunger_decrese():
 	while hunger <= 100 and hunger > 0:

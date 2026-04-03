@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhwqqs056q5og"]
+
+[ext_resource type="Script" uid="uid://svw517v85kke" path="res://spirit_attacks.gd" id="1_srplv"]
+
+[node name="SpiritAttacks" type="Timer" groups=["spirit_attack"]]
+one_shot = true
+script = ExtResource("1_srplv")
