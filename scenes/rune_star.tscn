@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://wvtyb3o2tcfg" path="res://scripts/rune_star.gd" id="1_0he5e"]
 [ext_resource type="Script" uid="uid://fxj5ky7jn2lj" path="res://scripts/rune_star_area.gd" id="1_u82iu"]
-[ext_resource type="Texture2D" uid="uid://dbfchpurorq7o" path="res://assets/rune_star.png" id="2_0he5e"]
+[ext_resource type="Texture2D" uid="uid://btgc5vwqvqock" path="res://assets/rune_star.png" id="2_0he5e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4134b"]
 radius = 44.407207
