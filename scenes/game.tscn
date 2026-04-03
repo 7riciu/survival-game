@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=25 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://c6dyvgl7p4uoi" path="res://assets/grass2.png" id="2_ca42v"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d15o2vyu462ih" path="res://scenes/levander_flower.tscn" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cknmeiehf5pe6" path="res://scenes/cotton_flower.tscn" id="14_trtic"]
 [ext_resource type="PackedScene" uid="uid://clw3bqikpjwgl" path="res://scenes/deer.tscn" id="15_ca42v"]
+[ext_resource type="PackedScene" uid="uid://8shn8hwalmlg" path="res://scenes/wolf.tscn" id="15_ir15t"]
 [ext_resource type="Texture2D" uid="uid://bl0k245squs46" path="res://assets/grass_patch_light.png" id="18_264po"]
 [ext_resource type="PackedScene" uid="uid://e32a5ls0kp2i" path="res://scenes/rune_heart.tscn" id="20_1kice"]
 [ext_resource type="PackedScene" uid="uid://7ac8vksg11ad" path="res://scenes/rune_heart_small.tscn" id="21_5newe"]
@@ -916,10 +917,10 @@ position = Vector2(7340, -50)
 position = Vector2(3389, 2694)
 
 [node name="rock2" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(4629, 2466)
+position = Vector2(4645, 2492)
 
 [node name="rock3" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(6430, 1670)
+position = Vector2(6512, 1741)
 
 [node name="rock4" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(6695, 1036)
@@ -958,7 +959,7 @@ position = Vector2(4968, 1998)
 position = Vector2(7320, -252)
 
 [node name="Merchant" parent="." instance=ExtResource("12_dinhu")]
-position = Vector2(5923, 1492)
+position = Vector2(5867, 1567)
 
 [node name="GrassPatchLight" type="Sprite2D" parent="."]
 position = Vector2(3614, 1352)
@@ -1440,3 +1441,15 @@ texture = ExtResource("18_264po")
 
 [node name="rune_heart" parent="." instance=ExtResource("20_1kice")]
 position = Vector2(3027, -86)
+
+[node name="woolf" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(4350, 3257)
+
+[node name="woolf2" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(3993, 2034)
+
+[node name="woolf3" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(7060, 1772)
+
+[node name="woolf4" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(6703, 91)

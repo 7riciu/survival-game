@@ -6,3 +6,4 @@ var crafting_menu_instance = null
 
 func _on_pressed() -> void:
 	crafting_button.crafting_menu_instance.visible = false
+	crafting_button.crafting_opened += 1
