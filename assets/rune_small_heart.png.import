@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4hoxyb7x3n0n"
-path="res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"
+uid="uid://bm05ovswdwfio"
+path="res://.godot/imported/rune_small_heart.png-c0253d49a5a6fcffb771cbf9c663fe94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player.png"
-dest_files=["res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"]
+source_file="res://assets/rune_small_heart.png"
+dest_files=["res://.godot/imported/rune_small_heart.png-c0253d49a5a6fcffb771cbf9c663fe94.ctex"]
 
 [params]
 

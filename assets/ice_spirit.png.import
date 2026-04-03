@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4hoxyb7x3n0n"
-path="res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"
+uid="uid://duxxcuqscmjx1"
+path="res://.godot/imported/ice_spirit.png-65240fa7bdb17fa20e69f58532c88b8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player.png"
-dest_files=["res://.godot/imported/player.png-be2216fcaabb5c62aa2466cd9a5726a8.ctex"]
+source_file="res://assets/ice_spirit.png"
+dest_files=["res://.godot/imported/ice_spirit.png-65240fa7bdb17fa20e69f58532c88b8b.ctex"]
 
 [params]
 
