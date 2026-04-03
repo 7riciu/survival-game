@@ -62,4 +62,5 @@ func freeze():
 	player.can_move = false
 	await get_tree().create_timer(3.0).timeout
 	player.can_move = true
+	ice_spirit_instance.queue_free()
 	player.get_node("AnimatedSprite2D").play("idle")

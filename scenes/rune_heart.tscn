@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://e32a5ls0kp2i"]
+
+[ext_resource type="Script" uid="uid://dcwg1qag3e445" path="res://scripts/rune_heart.gd" id="1_cy5lw"]
+[ext_resource type="Texture2D" uid="uid://dkfhuu6la7dt6" path="res://assets/rune_heart.png" id="1_xvwsp"]
+[ext_resource type="Script" uid="uid://cmh8dwff1u4nr" path="res://scripts/rune_heart_area.gd" id="2_nbyjo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cy5lw"]
+radius = 49.25444
+
+[node name="rune_heart" type="Node2D"]
+script = ExtResource("1_cy5lw")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_nbyjo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_xvwsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cy5lw")

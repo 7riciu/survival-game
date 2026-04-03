@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://0yj4hobgk4nj"]
+
+[ext_resource type="Script" uid="uid://wvtyb3o2tcfg" path="res://scripts/rune_star.gd" id="1_0he5e"]
+[ext_resource type="Script" uid="uid://fxj5ky7jn2lj" path="res://scripts/rune_star_area.gd" id="1_u82iu"]
+[ext_resource type="Texture2D" uid="uid://dbfchpurorq7o" path="res://assets/rune_star.png" id="2_0he5e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4134b"]
+radius = 44.407207
+
+[node name="rune_star" type="Node2D"]
+script = ExtResource("1_0he5e")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_u82iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_0he5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4134b")
