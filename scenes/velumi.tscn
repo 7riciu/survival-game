@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://beesx2rr8p1ma"]
+
+[ext_resource type="Texture2D" uid="uid://mg0j8g1sdoxp" path="res://assets/velumi.png" id="1_28ka8"]
+[ext_resource type="Script" uid="uid://dax2y0aq5mb78" path="res://scripts/velumi.gd" id="1_iudal"]
+[ext_resource type="Script" uid="uid://bsujvef2s6i3l" path="res://scripts/velumi_area.gd" id="3_ugsk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iudal"]
+atlas = ExtResource("1_28ka8")
+region = Rect2(0, 0, 106, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugsk8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iudal")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjewn"]
+radius = 43.046486
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ewfwh"]
+radius = 125.17188
+
+[node name="velumi" type="CharacterBody2D"]
+script = ExtResource("1_iudal")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ugsk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vjewn")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_ugsk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ewfwh")

@@ -956,7 +956,7 @@ position = Vector2(4964, 1384)
 position = Vector2(4968, 1998)
 
 [node name="rune_star" parent="." instance=ExtResource("22_37s47")]
-position = Vector2(7320, -252)
+position = Vector2(6404, 1650)
 
 [node name="Merchant" parent="." instance=ExtResource("12_dinhu")]
 position = Vector2(5867, 1567)
@@ -1440,7 +1440,7 @@ position = Vector2(2672, 2662)
 texture = ExtResource("18_264po")
 
 [node name="rune_heart" parent="." instance=ExtResource("20_1kice")]
-position = Vector2(3027, -86)
+position = Vector2(3031, -88)
 
 [node name="woolf" parent="." instance=ExtResource("15_ir15t")]
 position = Vector2(4350, 3257)
