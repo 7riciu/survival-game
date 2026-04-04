@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_4134b"]
 radius = 44.407207
 
-[node name="rune_star" type="Node2D"]
+[node name="rune_star" type="Node2D" groups=["rune_star"]]
 script = ExtResource("1_0he5e")
 
 [node name="Area2D" type="Area2D" parent="."]

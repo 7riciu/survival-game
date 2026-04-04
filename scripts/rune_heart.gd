@@ -1,6 +1,7 @@
 extends Node2D
 
-@onready var rune_heart_ui = get_tree().get_first_node_in_group("rune_heart")
+@onready var hole = get_tree().get_first_node_in_group("hole")
+@onready var rune_heart_ui = get_tree().get_first_node_in_group("rune_heart_ui")
 @onready var rune_heart_area = $Area2D
 var e_scene = load("res://scenes/e.tscn")
 
@@ -11,4 +12,5 @@ func _process(_delta: float) -> void:
 		e_instance.position = self.position + Vector2(0, -70)
 		if Input.is_action_just_pressed("e"):
 			rune_heart_ui.texture = load("res://assets/rune_heart.png")
+			hole.heart_collected = true
 			queue_free()

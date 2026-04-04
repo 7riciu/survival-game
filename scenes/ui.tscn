@@ -137,7 +137,7 @@ offset_top = 0.43998718
 offset_right = 0.3600006
 offset_bottom = 0.039978027
 
-[node name="heart" type="TextureRect" parent="." groups=["rune_heart"]]
+[node name="heart" type="TextureRect" parent="." groups=["rune_heart_ui"]]
 anchors_preset = -1
 anchor_left = 0.025
 anchor_top = 0.351
@@ -149,7 +149,7 @@ offset_bottom = -0.2000122
 texture = ExtResource("11_vsj0x")
 stretch_mode = 2
 
-[node name="heart_small" type="TextureRect" parent="." groups=["rune_heart_small"]]
+[node name="heart_small" type="TextureRect" parent="." groups=["rune_heart_small_ui"]]
 anchors_preset = -1
 anchor_left = 0.031000001
 anchor_top = 0.40800002
@@ -164,7 +164,7 @@ texture = ExtResource("12_qsv74")
 expand_mode = 4
 stretch_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="." groups=["rune_star"]]
+[node name="star" type="TextureRect" parent="." groups=["rune_star_ui"]]
 anchors_preset = -1
 anchor_left = 0.026
 anchor_top = 0.44500002

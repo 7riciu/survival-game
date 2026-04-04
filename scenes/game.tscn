@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b4esk8eblrhvn"]
+[gd_scene load_steps=26 format=3 uid="uid://b4esk8eblrhvn"]
 
 [ext_resource type="PackedScene" uid="uid://q2x0ajymmhdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://c6dyvgl7p4uoi" path="res://assets/grass2.png" id="2_ca42v"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://e32a5ls0kp2i" path="res://scenes/rune_heart.tscn" id="20_1kice"]
 [ext_resource type="PackedScene" uid="uid://7ac8vksg11ad" path="res://scenes/rune_heart_small.tscn" id="21_5newe"]
 [ext_resource type="PackedScene" uid="uid://0yj4hobgk4nj" path="res://scenes/rune_star.tscn" id="22_37s47"]
+[ext_resource type="PackedScene" uid="uid://18q28p85jbp2" path="res://scenes/velumi_hole.tscn" id="22_bt5mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("7_kvuet")
@@ -1453,3 +1454,6 @@ position = Vector2(7060, 1772)
 
 [node name="woolf4" parent="." instance=ExtResource("15_ir15t")]
 position = Vector2(6703, 91)
+
+[node name="velumi_hole" parent="." instance=ExtResource("22_bt5mj")]
+position = Vector2(4879, 875)

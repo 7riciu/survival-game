@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_1rlae"]
 radius = 165.00304
 
-[node name="velumi_hole" type="Area2D"]
+[node name="velumi_hole" type="Area2D" groups=["hole"]]
 script = ExtResource("1_1rlae")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
