@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://ddckudl6jhlc2"]
+[gd_scene load_steps=14 format=3 uid="uid://ddckudl6jhlc2"]
 
 [ext_resource type="PackedScene" uid="uid://cg8nq1md32ss0" path="res://scenes/inventory.tscn" id="10_7dvkv"]
 [ext_resource type="Texture2D" uid="uid://ld4b1xhx5eij" path="res://assets/timer.png" id="11_qsv74"]
+[ext_resource type="Texture2D" uid="uid://denwdg700b5gt" path="res://assets/unrune_heart.png" id="11_vsj0x"]
 [ext_resource type="Texture2D" uid="uid://23i7cskrgvnl" path="res://assets/bar background.png" id="12_8k7j3"]
 [ext_resource type="Texture2D" uid="uid://b4h5w5o24x4tc" path="res://assets/health.png" id="12_h1mc3"]
+[ext_resource type="Texture2D" uid="uid://b6wbjnbo6mj8i" path="res://assets/unrune_small_heart.png" id="12_qsv74"]
 [ext_resource type="Texture2D" uid="uid://cp1aomer8ddsf" path="res://assets/hunger.png" id="13_cof4p"]
+[ext_resource type="Texture2D" uid="uid://i60iyrgypirs" path="res://assets/unrune_star.png" id="13_h1mc3"]
 [ext_resource type="Texture2D" uid="uid://5j33yfi043md" path="res://assets/health bar.png" id="13_jkdwc"]
 [ext_resource type="Texture2D" uid="uid://b4vdyd5oc00uk" path="res://assets/thirst.png" id="14_f7tlh"]
 [ext_resource type="Texture2D" uid="uid://cc6qxc4x3lyc4" path="res://assets/hunger bar.png" id="15_rlppe"]
@@ -133,3 +136,43 @@ offset_left = -0.39999962
 offset_top = 0.43998718
 offset_right = 0.3600006
 offset_bottom = 0.039978027
+
+[node name="heart" type="TextureRect" parent="." groups=["rune_heart"]]
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.351
+anchor_right = 0.051000003
+anchor_bottom = 0.39000002
+offset_top = -0.08001709
+offset_right = 0.0799942
+offset_bottom = -0.2000122
+texture = ExtResource("11_vsj0x")
+stretch_mode = 2
+
+[node name="heart_small" type="TextureRect" parent="." groups=["rune_heart_small"]]
+anchors_preset = -1
+anchor_left = 0.031000001
+anchor_top = 0.40800002
+anchor_right = 0.045
+anchor_bottom = 0.43400002
+offset_left = -0.5200043
+offset_top = 0.35998535
+offset_right = 0.5999985
+offset_bottom = 0.27996826
+size_flags_horizontal = 4
+texture = ExtResource("12_qsv74")
+expand_mode = 4
+stretch_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." groups=["rune_star"]]
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.44500002
+anchor_right = 0.054
+anchor_bottom = 0.497
+offset_left = -0.920002
+offset_top = 0.39996338
+offset_right = 0.3199997
+offset_bottom = 0.23999023
+texture = ExtResource("13_h1mc3")
+stretch_mode = 2

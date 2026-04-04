@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var rune_heart_ui = get_tree().get_first_node_in_group("rune_heart")
 @onready var rune_heart_area = $Area2D
 var e_scene = load("res://scenes/e.tscn")
 
@@ -9,4 +10,5 @@ func _process(_delta: float) -> void:
 		get_tree().current_scene.add_child(e_instance)
 		e_instance.position = self.position + Vector2(0, -70)
 		if Input.is_action_just_pressed("e"):
+			rune_heart_ui.texture = load("res://assets/rune_heart.png")
 			queue_free()
