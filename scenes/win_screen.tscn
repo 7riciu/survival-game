@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://xb57a53x8hmu"]
+
+[ext_resource type="Script" uid="uid://c74i6134ofn7a" path="res://scripts/starting_screen.gd" id="1_erk2x"]
+[ext_resource type="Texture2D" uid="uid://d2u7yye4s1phg" path="res://assets/grass1.png" id="2_2l6cc"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_erk2x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -3525.0
+offset_right = 882.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2l6cc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -11.5
+offset_right = 100.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You WON!!!
+You beat Velumi
+Click anywhere on the screen to play again <3"
+horizontal_alignment = 1
+vertical_alignment = 1

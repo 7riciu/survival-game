@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://18q28p85jbp2"]
+
+[ext_resource type="Script" uid="uid://d3l6h2cul2r8b" path="res://scripts/velumi_hole.gd" id="1_1rlae"]
+[ext_resource type="Texture2D" uid="uid://b5mlihuam1c0n" path="res://assets/hole_velumi.PNG" id="1_6gq1b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1rlae"]
+radius = 165.00304
+
+[node name="velumi_hole" type="Area2D"]
+script = ExtResource("1_1rlae")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6gq1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1rlae")

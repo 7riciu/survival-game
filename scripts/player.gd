@@ -23,6 +23,10 @@ func _ready() -> void:
 	thirst_system()
 	hunger_decrese()
 
+func _process(_delta: float) -> void:
+	if health <= 0:
+		get_tree().change_scene_to_file("res://scenes/lose_screen.tscn")
+
 func _physics_process(_delta: float) -> void:
 	if can_move:
 		var direction = Vector2(

@@ -23,13 +23,7 @@ func _process(_delta: float) -> void:
 	if wolf_area.can_attack and Input.is_action_just_pressed("click"):
 		health -= player.sword_power
 	if health <= 0:
-		var fur = fur_scene.instantiate()
-		var meat = meat_scene.instantiate()
-		fur.global_position = self.global_position
-		meat.global_position = self.global_position + Vector2(10, 0)
-		get_tree().current_scene.add_child(fur)
-		get_tree().current_scene.add_child(meat)
-		queue_free()
+		get_tree().change_scene_to_file("res://scenes/win_screen.tscn")
 
 func wander(delta):
 	timer -= delta
