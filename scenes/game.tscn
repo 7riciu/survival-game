@@ -851,9 +851,6 @@ position = Vector2(3428, 1542)
 [node name="bush" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(3603, 1871)
 
-[node name="bush2" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(3328, 1923)
-
 [node name="bush3" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(3684, 2576)
 
@@ -876,7 +873,7 @@ position = Vector2(4603, 3475)
 position = Vector2(5151, 2863)
 
 [node name="bush10" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(5853, 3559)
+position = Vector2(5884, 3554)
 
 [node name="bush11" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(6449, 3807)
@@ -891,7 +888,7 @@ position = Vector2(7194, 2220)
 position = Vector2(6930, 2277)
 
 [node name="bush15" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(7099, 1333)
+position = Vector2(7058, 1327)
 
 [node name="bush16" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(5658, 909)
@@ -903,7 +900,7 @@ position = Vector2(5922, 1009)
 position = Vector2(4932, 240)
 
 [node name="bush19" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(5538, -105)
+position = Vector2(5539, -101)
 
 [node name="bush20" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(6330, 341)
@@ -924,19 +921,19 @@ position = Vector2(4645, 2492)
 position = Vector2(6512, 1741)
 
 [node name="rock4" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(6695, 1036)
+position = Vector2(6649, 1040)
 
 [node name="rock5" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(7533, 494)
 
 [node name="rock6" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(5650, -5)
+position = Vector2(5726, -7)
 
 [node name="rock7" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(5134, 3809)
+position = Vector2(5115, 3813)
 
 [node name="rock8" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(3547, 3712)
+position = Vector2(3466, 3690)
 
 [node name="rock9" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(6150, 2914)
@@ -945,7 +942,7 @@ position = Vector2(6150, 2914)
 position = Vector2(6848, 3000)
 
 [node name="rock11" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(7360, 3237)
+position = Vector2(7394, 3223)
 
 [node name="bush23" parent="." instance=ExtResource("5_iywne")]
 position = Vector2(4701, 1290)
@@ -1447,7 +1444,7 @@ position = Vector2(3031, -88)
 position = Vector2(4350, 3257)
 
 [node name="woolf2" parent="." instance=ExtResource("15_ir15t")]
-position = Vector2(3993, 2034)
+position = Vector2(4096, 2118)
 
 [node name="woolf3" parent="." instance=ExtResource("15_ir15t")]
 position = Vector2(7060, 1772)

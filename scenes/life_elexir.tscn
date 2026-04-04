@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://drnjnp4ve0qh6"]
+
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="1_1yc5r"]
+[ext_resource type="Texture2D" uid="uid://ck0mpa7pol451" path="res://assets/life_elexir.png" id="2_g7vdk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g41ko"]
+atlas = ExtResource("2_g7vdk")
+region = Rect2(0, 0, 69, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0j32i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g41ko")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6todw"]
+radius = 41.109608
+
+[node name="life_elexir" type="Area2D"]
+script = ExtResource("1_1yc5r")
+id = "life"
+display_name = "life"
+icon = ExtResource("2_g7vdk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0j32i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6todw")

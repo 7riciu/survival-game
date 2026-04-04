@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bqwabonj3mpen"]
+
+[ext_resource type="Script" uid="uid://bof21d5yvrto7" path="res://items/items_data.gd" id="1_4p030"]
+[ext_resource type="Texture2D" uid="uid://ck0mpa7pol451" path="res://assets/life_elexir.png" id="1_uo8jr"]
+
+[resource]
+script = ExtResource("1_4p030")
+id = "life_elexir"
+display_name = "life_elexir"
+icon = ExtResource("1_uo8jr")
+sell_price = 25
+edible = true

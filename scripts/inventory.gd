@@ -8,8 +8,10 @@ var cols: int = 10
 var inventory_slot_scene: PackedScene = preload("res://scenes/inventory_slot.tscn")
 var slots: Array = []
 
+@export var life_elexir_item: ItemData = preload("res://items/life_elexir.tres")
 @export var berry_item: ItemData = preload("res://items/berry.tres")
 @onready var hunger_bar = get_tree().get_first_node_in_group("hunger_bar")
+@onready var health_bar = get_tree().get_first_node_in_group("health_bar")
 @onready var player = get_tree().get_first_node_in_group("player")
 
 @onready var player_hand =  get_tree().get_first_node_in_group("player_hand")
@@ -110,6 +112,13 @@ func select(itm):
 			push_error("Scene not found for item: " + holdable_item_name)
 			return
 
+	if itm.item_name.to_lower() == "life_elexir":
+		player.health += 20
+		if player.health > 100:
+			player.health = 100
+		health_bar.value = player.health
+		inventory_data.remove(life_elexir_item, 1)
+	else:
 		player.hunger += 10
 		if player.hunger > 100:
 			player.hunger = 100

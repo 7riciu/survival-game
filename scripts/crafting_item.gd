@@ -5,14 +5,17 @@ var recipe
 
 @onready var inventory = get_tree().get_first_node_in_group("inventory")
 @onready var player = get_tree().get_first_node_in_group("player")
+@export var berry_item: ItemData = preload("res://items/berry.tres")
 @export var wood_item: ItemData = preload("res://items/wood.tres")
 @export var stone_item: ItemData = preload("res://items/stone.tres")
 @export var dragonfly_item: ItemData = preload("res://items/dragonfly.tres")
+var berry_amount
 var stone_amount
 var wood_amount
 var dragonfly_amount
 
 func _process(_delta: float) -> void:
+	berry_amount = inventory_data.items.get(berry_item, 0)
 	stone_amount = inventory_data.items.get(stone_item, 0)
 	wood_amount = inventory_data.items.get(wood_item, 0)
 	dragonfly_amount = inventory_data.items.get(dragonfly_item, 0)
@@ -26,6 +29,8 @@ func setup(id, data):
 
 func _pressed() -> void:
 	match item_id:
+		"life_elexir":
+			craft_life_elexir()
 		"sword":
 			craft_sword()
 		"pickaxe":
@@ -36,6 +41,12 @@ func _pressed() -> void:
 			craft_campfire()
 		"dragonfly_spade":
 			craft_dragonfly_spade()
+
+func craft_life_elexir():
+	var item = preload("res://items/life_elexir.tres")
+	if berry_amount >= 10:
+		inventory_data.remove(berry_item, 10)
+		inventory_data.add(item, 1)
 
 func craft_sword():
 	var item = preload("res://items/sword.tres")
