@@ -12,7 +12,7 @@ func _ready() -> void:
 	start_random_timer()
 
 func start_random_timer():
-	wait_time = randf_range(10.0, 20.0)
+	wait_time = randf_range(5.0, 10.0)
 	start()
 
 func _on_timer_timeout():
@@ -59,6 +59,7 @@ func freeze():
 	var ice_spirit_instance = ice_spirit_scene.instantiate()
 	player.add_child(ice_spirit_instance)
 	ice_spirit_instance.position = Vector2(150, -130)
+	player.walk_particles.emitting = false
 	player.can_move = false
 	await get_tree().create_timer(3.0).timeout
 	player.can_move = true

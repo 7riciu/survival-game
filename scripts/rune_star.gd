@@ -21,4 +21,3 @@ func _process(_delta: float) -> void:
 	else:
 		if e_instance != null:
 			e_instance.queue_free()
-			e_instance = null
