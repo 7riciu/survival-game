@@ -1,8 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://blyetrssc3457"]
+[gd_scene load_steps=5 format=3 uid="uid://blyetrssc3457"]
 
 [ext_resource type="Texture2D" uid="uid://duxxcuqscmjx1" path="res://assets/ice_spirit.png" id="1_phrn8"]
+
+[sub_resource type="Animation" id="Animation_vewkf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_phrn8"]
+resource_name = "float"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -12), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8v4f"]
+_data = {
+&"RESET": SubResource("Animation_vewkf"),
+&"float": SubResource("Animation_phrn8")
+}
 
 [node name="ice_spirit" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_phrn8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_a8v4f")
+}
+autoplay = "float"

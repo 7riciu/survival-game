@@ -21,7 +21,7 @@ func _on_timer_timeout():
 
 func random_attack():
 	randomize()
-	var attack = 2
+	var attack = randi_range(1, 3)
 	
 	match attack:
 		1:
