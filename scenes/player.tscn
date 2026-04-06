@@ -1,9 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://q2x0ajymmhdw"]
+[gd_scene load_steps=12 format=3 uid="uid://q2x0ajymmhdw"]
 
 [ext_resource type="Script" uid="uid://buio8tajyq2bw" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://xjdoyl4y4vm0" path="res://assets/player_freeze.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://d4hoxyb7x3n0n" path="res://assets/player.png" id="2_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bk4vkt5vbx6j6" path="res://assets/player_fire.png" id="4_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://cybhhlsqlmug" path="res://assets/stone.png" id="5_qlg0r"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tuyoq"]
+particle_flag_disable_z = true
+direction = Vector3(0.5, -1, 0)
+spread = 30.0
+initial_velocity_max = 371.66
+gravity = Vector3(0, 98, 0)
+scale_min = 0.0
+anim_offset_max = 0.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_dqkch")
@@ -50,6 +60,12 @@ height = 268.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_g2els")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, 120)
+emitting = false
+texture = ExtResource("5_qlg0r")
+process_material = SubResource("ParticleProcessMaterial_tuyoq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(9, -22)

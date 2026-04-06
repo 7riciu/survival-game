@@ -816,7 +816,7 @@ position = Vector2(5852, 2053)
 position = Vector2(6135, -60)
 
 [node name="tree9" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(4840, -66)
+position = Vector2(4762, -87)
 
 [node name="lake" parent="." instance=ExtResource("2_lbhrr")]
 position = Vector2(4076, 3631)

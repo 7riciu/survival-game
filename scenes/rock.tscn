@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cif56t0m63o21"]
+[gd_scene load_steps=9 format=3 uid="uid://cif56t0m63o21"]
 
 [ext_resource type="Texture2D" uid="uid://blj65lthve2bc" path="res://assets/rock.png" id="1_1di36"]
 [ext_resource type="Script" uid="uid://v7o4etp5nrio" path="res://scripts/rock.gd" id="1_ik6fu"]
+[ext_resource type="AudioStream" uid="uid://4fghpimkxdhi" path="res://sound/pick1.ogg" id="2_872ht"]
 [ext_resource type="Script" uid="uid://bulsodfhpud8g" path="res://scripts/rock_area.gd" id="2_mek2u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mek2u"]
@@ -28,6 +29,10 @@ radius = 210.94312
 [node name="rock" type="CharacterBody2D"]
 z_index = 3
 script = ExtResource("1_ik6fu")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_872ht")
+max_distance = 4096.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ik6fu")

@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var hunger_bar = get_tree().get_first_node_in_group("hunger_bar")
 @onready var thirst_bar = get_tree().get_first_node_in_group("thirst_bar")
 
+@onready var walk_particles = $GPUParticles2D
 @onready var anim = $AnimatedSprite2D
 
 @onready var can_move = true
@@ -35,7 +36,10 @@ func _physics_process(_delta: float) -> void:
 		)
 
 		if direction != Vector2.ZERO:
+			walk_particles.emitting = true
 			direction = direction.normalized()
+		else:
+			walk_particles.emitting = false
 
 		velocity = direction * speed
 		move_and_slide()
